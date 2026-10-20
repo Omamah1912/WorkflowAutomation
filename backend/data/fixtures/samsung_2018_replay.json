@@ -34,6 +34,13 @@
       "source_url": "https://www.koreajoongangdaily.com/business/samsung-securities-ceo-resigns-over-blunder/10435625"
     },
     {
+      "name": "credited_accounts",
+      "value": 2018,
+      "unit": "accounts",
+      "evidence": "Reported: the ghost shares were credited to 2,018 employee accounts.",
+      "source_url": "https://www.koreajoongangdaily.com/business/samsung-securities-ceo-resigns-over-blunder/10435625"
+    },
+    {
       "name": "shares_outstanding",
       "value": 89000000,
       "unit": "shares",

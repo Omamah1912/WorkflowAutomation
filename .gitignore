@@ -7,3 +7,5 @@ node_modules/
 *.sqlite
 backend/data/_cache/
 backend/data/runtime/
+frontend/dist/
+frontend/.env.local

@@ -94,6 +94,7 @@ class Document(BaseModel):
     metadata: dict = {}             # normalised intake row
     doc_type: Optional[str] = None
     doc_type_confidence: float = 0.0
+    doc_type_method: str = "classical"  # how the classifier decided (classical | llm_openai | llm_claude)
     relevance: Optional[bool] = None
     stream: Optional[str] = None
     legacy_stream: Optional[str] = None

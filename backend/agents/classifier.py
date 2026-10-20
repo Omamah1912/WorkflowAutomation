@@ -87,7 +87,7 @@ def classify(doc: Document) -> None:
         except llm.LLMUnavailable as e:
             reason += f"; LLM unavailable ({str(e)[:120]}) -> stays low confidence"
 
-    doc.doc_type, doc.doc_type_confidence = chosen["name"], confidence
+    doc.doc_type, doc.doc_type_confidence, doc.doc_type_method = chosen["name"], confidence, method
     doc.relevance, doc.stream = chosen["relevant"], chosen["stream"]
     doc.status = "classified"
     audit.log(doc, "classify", "classifier", method=method, confidence=confidence,

@@ -1,6 +1,7 @@
 """GhostStop API (FastAPI). Run locally: uvicorn app:app --port 8000
 Every response is computed live from the pipeline state; nothing is canned."""
 import asyncio
+import csv
 import hashlib
 import json
 import os
@@ -17,7 +18,7 @@ import orchestrator
 from agents import router, validator
 from state import Evidence, FieldValue
 from tools import audit, ledger, metrics, ocr, pdf_text, units
-from tools.config import RUNTIME
+from tools.config import DATA, RUNTIME, doc_types
 
 app = FastAPI(title="GhostStop")
 
@@ -80,12 +81,40 @@ def list_batches():
 def get_batch(batch_id: str):
     batch = _batch_or_404(batch_id)
     docs = [orchestrator.DOCS[i] for i in batch["doc_ids"] if i in orchestrator.DOCS]
+    reviewed = {e.doc_id for e in audit.all_events() if e.agent == "human"}
     return {**_public(batch), "documents": [{
         "doc_id": d.doc_id, "external_id": d.external_id, "source": d.source, "filename": d.filename,
         "doc_type": d.doc_type, "relevance": d.relevance, "stream": d.stream, "status": d.status, "route": d.route,
         "company": d.company.value if d.company else None, "label": d.label, "duplicate_of": d.duplicate_of,
         "timings": d.timings, "escalation_reasons": d.escalation_reasons,
+        "doc_type_confidence": d.doc_type_confidence, "doc_type_method": d.doc_type_method,
+        "tracks": len(d.tracks), "failed_rules": _failed_rules(d), "resolver_loops": d.resolver_loops,
+        "human_reviewed": d.doc_id in reviewed,
     } for d in docs]}
+
+
+def _failed_rules(doc) -> list[dict]:
+    return [{"rule_id": r.rule_id, "severity": r.severity} for t in doc.tracks for r in t.rule_results if r.status == "fail"]
+
+
+@app.get("/review-queue")
+def review_queue():
+    """Escalated documents across all batches, critical first, then oldest first."""
+    items = []
+    for d in orchestrator.DOCS.values():
+        if d.route != "needs_review":
+            continue
+        routed = [e for e in audit.for_doc(d.doc_id) if e.stage == "route"]
+        failed = _failed_rules(d)
+        items.append({
+            "doc_id": d.doc_id, "filename": d.filename, "doc_type": d.doc_type, "source": d.source,
+            "company": d.company.value if d.company else None, "label": d.label,
+            "critical": any(r["severity"] == "critical" for r in failed), "failed_rules": failed,
+            "consequence": (d.review_packet or {}).get("consequence") or "; ".join(d.escalation_reasons[:2]),
+            "escalated_at": routed[-1].started_at if routed else None,
+        })
+    items.sort(key=lambda i: (not i["critical"], i["escalated_at"] or ""))
+    return items
 
 
 @app.get("/stream/{batch_id}")
@@ -191,6 +220,33 @@ def get_metrics():
 @app.get("/llm-log")
 def llm_log():
     return llm.LLM_LOG
+
+
+@app.get("/fixtures")
+def fixtures():
+    """The labelled reconstruction files, so the UI shows their facts without typing them in."""
+    return [json.loads(p.read_text(encoding="utf-8")) for p in sorted((DATA / "fixtures").glob("*.json"))]
+
+
+@app.get("/baseline")
+def baseline():
+    """Manual-baseline facts computed from ps07 (time_spent_minutes, analyst_action, document type)."""
+    irrelevant = {t["name"] for t in doc_types() if not t["relevant"]}
+    with open(DATA / "csv" / "ps07_ingestion_queue.csv", encoding="utf-8") as f:
+        rows = list(csv.DictReader(f))
+    admin = [r for r in rows if r["document_type_detected"] in irrelevant]
+    processed_admin = [r for r in admin if r["analyst_action"] == "Processed"]
+    with open(DATA / "csv" / "ps01_documents_metadata.csv", encoding="utf-8") as f:
+        ps01_rows = sum(1 for _ in csv.DictReader(f))
+    return {
+        "ps01_rows": ps01_rows,
+        "jobs": len(rows), "irrelevant_jobs": len(admin),
+        "irrelevant_share": round(len(admin) / len(rows), 3),
+        "irrelevant_processed": len(processed_admin),
+        "irrelevant_processed_share": round(len(processed_admin) / len(admin), 3) if admin else None,
+        "minutes_total": sum(int(r["time_spent_minutes"]) for r in rows),
+        "minutes_on_irrelevant": sum(int(r["time_spent_minutes"]) for r in admin),
+    }
 
 
 @app.get("/ledger")
