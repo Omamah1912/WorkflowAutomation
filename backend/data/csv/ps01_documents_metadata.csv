@@ -1,0 +1,201 @@
+doc_id,filename,source,received_date,file_type,file_size_kb,ocr_text_snippet,current_status,assigned_stream
+DOC-0001,annual_report_1.pdf,FTP Upload,24/01/2026,PDF,1878,Sample OCR text for annual report document #1. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0002,annual_report_2.pdf,Email Ingestion,03/09/2026,PDF,294,Sample OCR text for annual report document #2. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0003,technical_report_3.pdf,Web Scraper,17/04/2026,PDF,1678,Sample OCR text for technical report document #3. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0004,regulatory_filing_4.pdf,Email Ingestion,15/04/2026,PDF,1357,Sample OCR text for regulatory filing document #4. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0005,earnings_call_transcript_5.pdf,API Feed,05/05/2026,PDF,887,Sample OCR text for earnings call transcript document #5. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0006,regulatory_filing_6.pdf,Web Scraper,12/02/2026,PDF,2216,Sample OCR text for regulatory filing document #6. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0007,news_article_7.pdf,Email Ingestion,04/09/2026,PDF,4572,Sample OCR text for news article document #7. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0008,esg_disclosure_8.pdf,Email Ingestion,19/06/2026,PDF,425,Sample OCR text for esg disclosure document #8. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0009,investor_presentation_9.pdf,Email Ingestion,28/02/2026,PDF,3163,Sample OCR text for investor presentation document #9. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0010,news_article_10.pdf,API Feed,06/06/2026,PDF,1766,Sample OCR text for news article document #10. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0011,annual_report_11.pdf,FTP Upload,18/03/2026,PDF,3836,Sample OCR text for annual report document #11. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0012,investor_presentation_12.pdf,Email Ingestion,08/09/2026,PDF,1926,Sample OCR text for investor presentation document #12. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0013,earnings_call_transcript_13.pdf,FTP Upload,09/07/2026,PDF,4696,Sample OCR text for earnings call transcript document #13. Contains references to Q1 financials and market data.,Pending,Market Research
+DOC-0014,technical_report_14.pdf,FTP Upload,13/08/2026,PDF,2219,Sample OCR text for technical report document #14. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0015,technical_report_15.pdf,Web Scraper,18/09/2026,PDF,3559,Sample OCR text for technical report document #15. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0016,regulatory_filing_16.pdf,Web Scraper,08/06/2026,PDF,4092,Sample OCR text for regulatory filing document #16. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0017,press_release_17.pdf,Manual Upload,05/02/2026,PDF,4935,Sample OCR text for press release document #17. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0018,regulatory_filing_18.pdf,Web Scraper,20/07/2026,PDF,2109,Sample OCR text for regulatory filing document #18. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0019,press_release_19.pdf,API Feed,22/02/2026,PDF,963,Sample OCR text for press release document #19. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0020,regulatory_filing_20.pdf,API Feed,15/03/2026,PDF,4150,Sample OCR text for regulatory filing document #20. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0021,internal_memo_21.pdf,Web Scraper,28/02/2026,PDF,1679,Sample OCR text for internal memo document #21. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0022,earnings_call_transcript_22.pdf,Web Scraper,18/03/2026,PDF,2705,Sample OCR text for earnings call transcript document #22. Contains references to Q1 financials and market data.,Pending,Archive
+DOC-0023,press_release_23.pdf,FTP Upload,12/02/2026,PDF,524,Sample OCR text for press release document #23. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0024,esg_disclosure_24.pdf,Email Ingestion,03/02/2026,PDF,4413,Sample OCR text for esg disclosure document #24. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0025,quarterly_report_25.pdf,API Feed,18/08/2026,PDF,4372,Sample OCR text for quarterly report document #25. Contains references to Q2 financials and market data.,Pending,Discard
+DOC-0026,regulatory_filing_26.pdf,API Feed,18/04/2026,PDF,3318,Sample OCR text for regulatory filing document #26. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0027,news_article_27.pdf,FTP Upload,15/09/2026,PDF,1890,Sample OCR text for news article document #27. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0028,earnings_call_transcript_28.pdf,Web Scraper,19/01/2026,PDF,1854,Sample OCR text for earnings call transcript document #28. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0029,annual_report_29.pdf,Email Ingestion,08/01/2026,PDF,2756,Sample OCR text for annual report document #29. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0030,internal_memo_30.pdf,FTP Upload,09/04/2026,PDF,4467,Sample OCR text for internal memo document #30. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0031,esg_disclosure_31.pdf,Manual Upload,08/08/2026,PDF,1609,Sample OCR text for esg disclosure document #31. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0032,annual_report_32.pdf,Manual Upload,12/07/2026,PDF,3875,Sample OCR text for annual report document #32. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0033,annual_report_33.pdf,Email Ingestion,13/01/2026,PDF,2086,Sample OCR text for annual report document #33. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0034,technical_report_34.pdf,Manual Upload,15/09/2026,PDF,1553,Sample OCR text for technical report document #34. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0035,news_article_35.pdf,Manual Upload,28/04/2026,PDF,4558,Sample OCR text for news article document #35. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0036,press_release_36.pdf,Email Ingestion,27/09/2026,PDF,1986,Sample OCR text for press release document #36. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0037,regulatory_filing_37.pdf,Manual Upload,16/08/2026,PDF,530,Sample OCR text for regulatory filing document #37. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0038,regulatory_filing_38.pdf,Manual Upload,13/01/2026,PDF,2386,Sample OCR text for regulatory filing document #38. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0039,internal_memo_39.pdf,API Feed,05/08/2026,PDF,1833,Sample OCR text for internal memo document #39. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0040,esg_disclosure_40.pdf,Email Ingestion,02/09/2026,PDF,460,Sample OCR text for esg disclosure document #40. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0041,news_article_41.pdf,Email Ingestion,28/09/2026,PDF,4210,Sample OCR text for news article document #41. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0042,quarterly_report_42.pdf,FTP Upload,20/02/2026,PDF,3357,Sample OCR text for quarterly report document #42. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0043,esg_disclosure_43.pdf,Web Scraper,19/04/2026,PDF,721,Sample OCR text for esg disclosure document #43. Contains references to Q1 financials and market data.,Pending,Archive
+DOC-0044,esg_disclosure_44.pdf,FTP Upload,11/09/2026,PDF,2623,Sample OCR text for esg disclosure document #44. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0045,investor_presentation_45.pdf,Manual Upload,05/07/2026,PDF,2640,Sample OCR text for investor presentation document #45. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0046,press_release_46.pdf,Email Ingestion,20/08/2026,PDF,4454,Sample OCR text for press release document #46. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0047,internal_memo_47.pdf,Email Ingestion,05/05/2026,PDF,2051,Sample OCR text for internal memo document #47. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0048,investor_presentation_48.pdf,Web Scraper,15/03/2026,PDF,4383,Sample OCR text for investor presentation document #48. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0049,internal_memo_49.pdf,FTP Upload,22/05/2026,PDF,2216,Sample OCR text for internal memo document #49. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0050,annual_report_50.pdf,API Feed,05/09/2026,PDF,1775,Sample OCR text for annual report document #50. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0051,technical_report_51.pdf,API Feed,17/05/2026,PDF,466,Sample OCR text for technical report document #51. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0052,regulatory_filing_52.pdf,API Feed,02/05/2026,PDF,1121,Sample OCR text for regulatory filing document #52. Contains references to Q1 financials and market data.,Pending,Market Research
+DOC-0053,quarterly_report_53.pdf,Web Scraper,18/08/2026,PDF,129,Sample OCR text for quarterly report document #53. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0054,annual_report_54.pdf,API Feed,18/03/2026,PDF,4821,Sample OCR text for annual report document #54. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0055,quarterly_report_55.pdf,API Feed,05/07/2026,PDF,3037,Sample OCR text for quarterly report document #55. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0056,earnings_call_transcript_56.pdf,Email Ingestion,22/04/2026,PDF,2947,Sample OCR text for earnings call transcript document #56. Contains references to Q2 financials and market data.,Pending,Discard
+DOC-0057,regulatory_filing_57.pdf,FTP Upload,08/03/2026,PDF,3427,Sample OCR text for regulatory filing document #57. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0058,quarterly_report_58.pdf,FTP Upload,26/06/2026,PDF,2235,Sample OCR text for quarterly report document #58. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0059,annual_report_59.pdf,Manual Upload,28/07/2026,PDF,1872,Sample OCR text for annual report document #59. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0060,news_article_60.pdf,FTP Upload,10/06/2026,PDF,243,Sample OCR text for news article document #60. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0061,regulatory_filing_61.pdf,API Feed,09/06/2026,PDF,2926,Sample OCR text for regulatory filing document #61. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0062,regulatory_filing_62.pdf,Email Ingestion,11/09/2026,PDF,2189,Sample OCR text for regulatory filing document #62. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0063,esg_disclosure_63.pdf,Web Scraper,02/05/2026,PDF,3609,Sample OCR text for esg disclosure document #63. Contains references to Q1 financials and market data.,Pending,Market Research
+DOC-0064,earnings_call_transcript_64.pdf,Manual Upload,20/07/2026,PDF,4773,Sample OCR text for earnings call transcript document #64. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0065,investor_presentation_65.pdf,Email Ingestion,23/01/2026,PDF,4309,Sample OCR text for investor presentation document #65. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0066,technical_report_66.pdf,API Feed,14/06/2026,PDF,2621,Sample OCR text for technical report document #66. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0067,investor_presentation_67.pdf,API Feed,10/09/2026,PDF,3346,Sample OCR text for investor presentation document #67. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0068,internal_memo_68.pdf,Manual Upload,07/03/2026,PDF,1475,Sample OCR text for internal memo document #68. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0069,esg_disclosure_69.pdf,API Feed,13/05/2026,PDF,2400,Sample OCR text for esg disclosure document #69. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0070,regulatory_filing_70.pdf,Manual Upload,15/06/2026,PDF,1800,Sample OCR text for regulatory filing document #70. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0071,news_article_71.pdf,API Feed,22/03/2026,PDF,4272,Sample OCR text for news article document #71. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0072,earnings_call_transcript_72.pdf,API Feed,27/02/2026,PDF,1890,Sample OCR text for earnings call transcript document #72. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0073,quarterly_report_73.pdf,Manual Upload,02/01/2026,PDF,646,Sample OCR text for quarterly report document #73. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0074,regulatory_filing_74.pdf,Manual Upload,23/04/2026,PDF,3323,Sample OCR text for regulatory filing document #74. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0075,quarterly_report_75.pdf,Manual Upload,25/01/2026,PDF,1842,Sample OCR text for quarterly report document #75. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0076,internal_memo_76.pdf,Email Ingestion,02/08/2026,PDF,3789,Sample OCR text for internal memo document #76. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0077,news_article_77.pdf,Manual Upload,18/09/2026,PDF,4185,Sample OCR text for news article document #77. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0078,internal_memo_78.pdf,Manual Upload,06/08/2026,PDF,2173,Sample OCR text for internal memo document #78. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0079,investor_presentation_79.pdf,API Feed,16/09/2026,PDF,3653,Sample OCR text for investor presentation document #79. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0080,investor_presentation_80.pdf,API Feed,09/04/2026,PDF,4474,Sample OCR text for investor presentation document #80. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0081,quarterly_report_81.pdf,FTP Upload,08/03/2026,PDF,1802,Sample OCR text for quarterly report document #81. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0082,regulatory_filing_82.pdf,Manual Upload,11/07/2026,PDF,560,Sample OCR text for regulatory filing document #82. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0083,regulatory_filing_83.pdf,Web Scraper,25/07/2026,PDF,3166,Sample OCR text for regulatory filing document #83. Contains references to Q1 financials and market data.,Pending,Archive
+DOC-0084,press_release_84.pdf,Manual Upload,10/06/2026,PDF,4459,Sample OCR text for press release document #84. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0085,esg_disclosure_85.pdf,API Feed,16/04/2026,PDF,3620,Sample OCR text for esg disclosure document #85. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0086,press_release_86.pdf,FTP Upload,11/07/2026,PDF,3878,Sample OCR text for press release document #86. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0087,esg_disclosure_87.pdf,Web Scraper,01/09/2026,PDF,4673,Sample OCR text for esg disclosure document #87. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0088,annual_report_88.pdf,FTP Upload,05/07/2026,PDF,461,Sample OCR text for annual report document #88. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0089,regulatory_filing_89.pdf,API Feed,07/06/2026,PDF,2814,Sample OCR text for regulatory filing document #89. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0090,investor_presentation_90.pdf,Manual Upload,09/07/2026,PDF,208,Sample OCR text for investor presentation document #90. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0091,press_release_91.pdf,Email Ingestion,08/06/2026,PDF,304,Sample OCR text for press release document #91. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0092,technical_report_92.pdf,FTP Upload,20/01/2026,PDF,1084,Sample OCR text for technical report document #92. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0093,annual_report_93.pdf,API Feed,15/04/2026,PDF,1424,Sample OCR text for annual report document #93. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0094,esg_disclosure_94.pdf,API Feed,25/02/2026,PDF,935,Sample OCR text for esg disclosure document #94. Contains references to Q2 financials and market data.,Pending,Discard
+DOC-0095,press_release_95.pdf,Manual Upload,19/05/2026,PDF,1674,Sample OCR text for press release document #95. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0096,esg_disclosure_96.pdf,Web Scraper,04/04/2026,PDF,1041,Sample OCR text for esg disclosure document #96. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0097,press_release_97.pdf,API Feed,18/06/2026,PDF,614,Sample OCR text for press release document #97. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0098,earnings_call_transcript_98.pdf,Manual Upload,28/01/2026,PDF,914,Sample OCR text for earnings call transcript document #98. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0099,earnings_call_transcript_99.pdf,Manual Upload,23/08/2026,PDF,1492,Sample OCR text for earnings call transcript document #99. Contains references to Q2 financials and market data.,Pending,Discard
+DOC-0100,investor_presentation_100.pdf,Manual Upload,25/09/2026,PDF,3618,Sample OCR text for investor presentation document #100. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0101,investor_presentation_101.pdf,Email Ingestion,28/06/2026,PDF,2334,Sample OCR text for investor presentation document #101. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0102,technical_report_102.pdf,API Feed,19/08/2026,PDF,285,Sample OCR text for technical report document #102. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0103,earnings_call_transcript_103.pdf,API Feed,16/03/2026,PDF,2166,Sample OCR text for earnings call transcript document #103. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0104,investor_presentation_104.pdf,Web Scraper,18/05/2026,PDF,1615,Sample OCR text for investor presentation document #104. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0105,technical_report_105.pdf,Manual Upload,16/07/2026,PDF,4070,Sample OCR text for technical report document #105. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0106,press_release_106.pdf,Manual Upload,10/02/2026,PDF,2043,Sample OCR text for press release document #106. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0107,esg_disclosure_107.pdf,Manual Upload,16/06/2026,PDF,4558,Sample OCR text for esg disclosure document #107. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0108,earnings_call_transcript_108.pdf,API Feed,09/08/2026,PDF,1938,Sample OCR text for earnings call transcript document #108. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0109,technical_report_109.pdf,FTP Upload,04/06/2026,PDF,1822,Sample OCR text for technical report document #109. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0110,investor_presentation_110.pdf,Email Ingestion,20/09/2026,PDF,1640,Sample OCR text for investor presentation document #110. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0111,technical_report_111.pdf,Email Ingestion,06/06/2026,PDF,4425,Sample OCR text for technical report document #111. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0112,investor_presentation_112.pdf,FTP Upload,02/01/2026,PDF,4071,Sample OCR text for investor presentation document #112. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0113,press_release_113.pdf,Manual Upload,16/05/2026,PDF,2841,Sample OCR text for press release document #113. Contains references to Q4 financials and market data.,Pending,Regulatory Compliance
+DOC-0114,press_release_114.pdf,Email Ingestion,28/05/2026,PDF,585,Sample OCR text for press release document #114. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0115,news_article_115.pdf,FTP Upload,19/02/2026,PDF,1272,Sample OCR text for news article document #115. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0116,investor_presentation_116.pdf,Web Scraper,08/02/2026,PDF,3459,Sample OCR text for investor presentation document #116. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0117,esg_disclosure_117.pdf,Manual Upload,25/04/2026,PDF,3676,Sample OCR text for esg disclosure document #117. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0118,esg_disclosure_118.pdf,Web Scraper,10/07/2026,PDF,862,Sample OCR text for esg disclosure document #118. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0119,technical_report_119.pdf,FTP Upload,22/05/2026,PDF,2014,Sample OCR text for technical report document #119. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0120,internal_memo_120.pdf,Manual Upload,06/02/2026,PDF,3740,Sample OCR text for internal memo document #120. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0121,news_article_121.pdf,API Feed,02/05/2026,PDF,2366,Sample OCR text for news article document #121. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0122,annual_report_122.pdf,Manual Upload,09/04/2026,PDF,990,Sample OCR text for annual report document #122. Contains references to Q2 financials and market data.,Pending,Discard
+DOC-0123,technical_report_123.pdf,Email Ingestion,09/03/2026,PDF,538,Sample OCR text for technical report document #123. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0124,investor_presentation_124.pdf,Manual Upload,15/05/2026,PDF,2541,Sample OCR text for investor presentation document #124. Contains references to Q1 financials and market data.,Pending,Archive
+DOC-0125,investor_presentation_125.pdf,Manual Upload,18/09/2026,PDF,708,Sample OCR text for investor presentation document #125. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0126,press_release_126.pdf,Web Scraper,24/07/2026,PDF,2101,Sample OCR text for press release document #126. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0127,annual_report_127.pdf,API Feed,22/04/2026,PDF,4770,Sample OCR text for annual report document #127. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0128,quarterly_report_128.pdf,API Feed,17/08/2026,PDF,1536,Sample OCR text for quarterly report document #128. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0129,regulatory_filing_129.pdf,API Feed,03/08/2026,PDF,3395,Sample OCR text for regulatory filing document #129. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0130,earnings_call_transcript_130.pdf,API Feed,28/02/2026,PDF,3422,Sample OCR text for earnings call transcript document #130. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0131,investor_presentation_131.pdf,Manual Upload,27/07/2026,PDF,771,Sample OCR text for investor presentation document #131. Contains references to Q1 financials and market data.,Pending,Market Research
+DOC-0132,investor_presentation_132.pdf,Web Scraper,04/06/2026,PDF,59,Sample OCR text for investor presentation document #132. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0133,news_article_133.pdf,Web Scraper,02/07/2026,PDF,3013,Sample OCR text for news article document #133. Contains references to Q2 financials and market data.,Pending,Discard
+DOC-0134,news_article_134.pdf,FTP Upload,25/08/2026,PDF,2237,Sample OCR text for news article document #134. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0135,quarterly_report_135.pdf,Email Ingestion,15/05/2026,PDF,286,Sample OCR text for quarterly report document #135. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0136,technical_report_136.pdf,Web Scraper,10/03/2026,PDF,3392,Sample OCR text for technical report document #136. Contains references to Q1 financials and market data.,Pending,Financial Analysis
+DOC-0137,technical_report_137.pdf,FTP Upload,15/02/2026,PDF,4132,Sample OCR text for technical report document #137. Contains references to Q1 financials and market data.,Pending,Market Research
+DOC-0138,internal_memo_138.pdf,Manual Upload,14/05/2026,PDF,2046,Sample OCR text for internal memo document #138. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0139,internal_memo_139.pdf,Web Scraper,13/03/2026,PDF,4213,Sample OCR text for internal memo document #139. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0140,annual_report_140.pdf,API Feed,25/05/2026,PDF,4209,Sample OCR text for annual report document #140. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0141,press_release_141.pdf,Web Scraper,24/05/2026,PDF,4800,Sample OCR text for press release document #141. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0142,quarterly_report_142.pdf,API Feed,18/08/2026,PDF,2773,Sample OCR text for quarterly report document #142. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0143,internal_memo_143.pdf,FTP Upload,15/07/2026,PDF,2006,Sample OCR text for internal memo document #143. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0144,regulatory_filing_144.pdf,Email Ingestion,28/04/2026,PDF,2656,Sample OCR text for regulatory filing document #144. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0145,regulatory_filing_145.pdf,Manual Upload,22/07/2026,PDF,353,Sample OCR text for regulatory filing document #145. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0146,internal_memo_146.pdf,Manual Upload,28/06/2026,PDF,866,Sample OCR text for internal memo document #146. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0147,news_article_147.pdf,Manual Upload,24/01/2026,PDF,1314,Sample OCR text for news article document #147. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0148,news_article_148.pdf,Email Ingestion,11/05/2026,PDF,2741,Sample OCR text for news article document #148. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0149,regulatory_filing_149.pdf,Web Scraper,21/06/2026,PDF,344,Sample OCR text for regulatory filing document #149. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0150,annual_report_150.pdf,FTP Upload,21/04/2026,PDF,790,Sample OCR text for annual report document #150. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0151,annual_report_151.pdf,API Feed,15/02/2026,PDF,287,Sample OCR text for annual report document #151. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0152,earnings_call_transcript_152.pdf,API Feed,10/01/2026,PDF,3578,Sample OCR text for earnings call transcript document #152. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0153,technical_report_153.pdf,FTP Upload,14/09/2026,PDF,1484,Sample OCR text for technical report document #153. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0154,esg_disclosure_154.pdf,Manual Upload,20/07/2026,PDF,4827,Sample OCR text for esg disclosure document #154. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0155,technical_report_155.pdf,Manual Upload,21/08/2026,PDF,2141,Sample OCR text for technical report document #155. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0156,news_article_156.pdf,Email Ingestion,22/05/2026,PDF,3668,Sample OCR text for news article document #156. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0157,esg_disclosure_157.pdf,API Feed,21/05/2026,PDF,3792,Sample OCR text for esg disclosure document #157. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0158,technical_report_158.pdf,Email Ingestion,28/07/2026,PDF,1993,Sample OCR text for technical report document #158. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0159,esg_disclosure_159.pdf,API Feed,19/06/2026,PDF,229,Sample OCR text for esg disclosure document #159. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0160,investor_presentation_160.pdf,Web Scraper,19/01/2026,PDF,4119,Sample OCR text for investor presentation document #160. Contains references to Q1 financials and market data.,Pending,Market Research
+DOC-0161,technical_report_161.pdf,Web Scraper,08/06/2026,PDF,2103,Sample OCR text for technical report document #161. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0162,annual_report_162.pdf,Email Ingestion,10/01/2026,PDF,4797,Sample OCR text for annual report document #162. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0163,quarterly_report_163.pdf,Manual Upload,10/02/2026,PDF,1488,Sample OCR text for quarterly report document #163. Contains references to Q3 financials and market data.,Pending,Regulatory Compliance
+DOC-0164,quarterly_report_164.pdf,FTP Upload,12/09/2026,PDF,2155,Sample OCR text for quarterly report document #164. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0165,investor_presentation_165.pdf,Manual Upload,26/06/2026,PDF,666,Sample OCR text for investor presentation document #165. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0166,technical_report_166.pdf,Email Ingestion,28/07/2026,PDF,3282,Sample OCR text for technical report document #166. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0167,investor_presentation_167.pdf,API Feed,04/09/2026,PDF,2197,Sample OCR text for investor presentation document #167. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0168,regulatory_filing_168.pdf,Manual Upload,04/06/2026,PDF,255,Sample OCR text for regulatory filing document #168. Contains references to Q2 financials and market data.,Pending,Discard
+DOC-0169,internal_memo_169.pdf,Email Ingestion,20/06/2026,PDF,3853,Sample OCR text for internal memo document #169. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0170,regulatory_filing_170.pdf,Email Ingestion,05/02/2026,PDF,2543,Sample OCR text for regulatory filing document #170. Contains references to Q1 financials and market data.,Pending,Archive
+DOC-0171,annual_report_171.pdf,Manual Upload,08/02/2026,PDF,3766,Sample OCR text for annual report document #171. Contains references to Q2 financials and market data.,Pending,Market Research
+DOC-0172,internal_memo_172.pdf,Manual Upload,19/07/2026,PDF,861,Sample OCR text for internal memo document #172. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0173,esg_disclosure_173.pdf,API Feed,09/07/2026,PDF,1829,Sample OCR text for esg disclosure document #173. Contains references to Q1 financials and market data.,Pending,Archive
+DOC-0174,news_article_174.pdf,Email Ingestion,28/04/2026,PDF,3059,Sample OCR text for news article document #174. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0175,earnings_call_transcript_175.pdf,FTP Upload,13/01/2026,PDF,1050,Sample OCR text for earnings call transcript document #175. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0176,annual_report_176.pdf,Email Ingestion,21/04/2026,PDF,2782,Sample OCR text for annual report document #176. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0177,quarterly_report_177.pdf,Web Scraper,03/04/2026,PDF,1819,Sample OCR text for quarterly report document #177. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0178,earnings_call_transcript_178.pdf,API Feed,26/03/2026,PDF,1235,Sample OCR text for earnings call transcript document #178. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0179,internal_memo_179.pdf,Email Ingestion,26/05/2026,PDF,261,Sample OCR text for internal memo document #179. Contains references to Q2 financials and market data.,Pending,Regulatory Compliance
+DOC-0180,press_release_180.pdf,Web Scraper,26/06/2026,PDF,2702,Sample OCR text for press release document #180. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0181,quarterly_report_181.pdf,Manual Upload,02/05/2026,PDF,4359,Sample OCR text for quarterly report document #181. Contains references to Q2 financials and market data.,Pending,Financial Analysis
+DOC-0182,annual_report_182.pdf,Web Scraper,15/08/2026,PDF,4913,Sample OCR text for annual report document #182. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0183,news_article_183.pdf,Web Scraper,08/09/2026,PDF,2520,Sample OCR text for news article document #183. Contains references to Q1 financials and market data.,Pending,Archive
+DOC-0184,press_release_184.pdf,Manual Upload,16/01/2026,PDF,934,Sample OCR text for press release document #184. Contains references to Q4 financials and market data.,Pending,Archive
+DOC-0185,news_article_185.pdf,Web Scraper,03/02/2026,PDF,1265,Sample OCR text for news article document #185. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0186,quarterly_report_186.pdf,Manual Upload,20/05/2026,PDF,4943,Sample OCR text for quarterly report document #186. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0187,investor_presentation_187.pdf,Email Ingestion,17/08/2026,PDF,987,Sample OCR text for investor presentation document #187. Contains references to Q4 financials and market data.,Pending,Discard
+DOC-0188,technical_report_188.pdf,Manual Upload,15/07/2026,PDF,2826,Sample OCR text for technical report document #188. Contains references to Q2 financials and market data.,Pending,Archive
+DOC-0189,regulatory_filing_189.pdf,API Feed,24/07/2026,PDF,3546,Sample OCR text for regulatory filing document #189. Contains references to Q1 financials and market data.,Pending,Market Research
+DOC-0190,investor_presentation_190.pdf,Email Ingestion,05/06/2026,PDF,797,Sample OCR text for investor presentation document #190. Contains references to Q4 financials and market data.,Pending,Financial Analysis
+DOC-0191,annual_report_191.pdf,FTP Upload,04/07/2026,PDF,4607,Sample OCR text for annual report document #191. Contains references to Q3 financials and market data.,Pending,Financial Analysis
+DOC-0192,esg_disclosure_192.pdf,Email Ingestion,18/09/2026,PDF,3415,Sample OCR text for esg disclosure document #192. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0193,regulatory_filing_193.pdf,API Feed,10/01/2026,PDF,898,Sample OCR text for regulatory filing document #193. Contains references to Q3 financials and market data.,Pending,Discard
+DOC-0194,internal_memo_194.pdf,FTP Upload,05/04/2026,PDF,936,Sample OCR text for internal memo document #194. Contains references to Q4 financials and market data.,Pending,Market Research
+DOC-0195,internal_memo_195.pdf,Web Scraper,04/06/2026,PDF,1902,Sample OCR text for internal memo document #195. Contains references to Q3 financials and market data.,Pending,Archive
+DOC-0196,internal_memo_196.pdf,Email Ingestion,01/09/2026,PDF,1527,Sample OCR text for internal memo document #196. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0197,investor_presentation_197.pdf,FTP Upload,12/06/2026,PDF,1223,Sample OCR text for investor presentation document #197. Contains references to Q1 financials and market data.,Pending,Discard
+DOC-0198,regulatory_filing_198.pdf,Email Ingestion,05/02/2026,PDF,4395,Sample OCR text for regulatory filing document #198. Contains references to Q1 financials and market data.,Pending,Regulatory Compliance
+DOC-0199,regulatory_filing_199.pdf,FTP Upload,15/07/2026,PDF,3081,Sample OCR text for regulatory filing document #199. Contains references to Q3 financials and market data.,Pending,Market Research
+DOC-0200,earnings_call_transcript_200.pdf,FTP Upload,02/02/2026,PDF,457,Sample OCR text for earnings call transcript document #200. Contains references to Q2 financials and market data.,Pending,Financial Analysis

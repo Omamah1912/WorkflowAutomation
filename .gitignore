@@ -1,0 +1,7 @@
+.env
+venv/
+.venv/
+__pycache__/
+node_modules/
+*.sqlite
+backend/data/_cache/

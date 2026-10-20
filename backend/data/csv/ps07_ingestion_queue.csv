@@ -1,0 +1,251 @@
+job_id,document_id,filename,ingestion_timestamp,document_type_detected,contains_financial_data,contains_admin_only,analyst_action,time_spent_minutes,was_relevant
+JOB-00001,FDOC-78461,10-q_filing_1.pdf,2026-05-19T07:08:00,10-Q Filing,TRUE,FALSE,Processed,42,TRUE
+JOB-00002,FDOC-87616,board_resolution_2.pdf,2026-07-11T15:49:00,Board Resolution,FALSE,TRUE,Processed,5,FALSE
+JOB-00003,FDOC-40386,dividend_declaration_3.pdf,2026-08-07T08:00:00,Dividend Declaration,TRUE,FALSE,Processed,18,TRUE
+JOB-00004,FDOC-10032,10-k_filing_4.pdf,2026-03-05T08:30:00,10-K Filing,TRUE,FALSE,Processed,25,TRUE
+JOB-00005,FDOC-67630,10-k_filing_5.pdf,2026-01-05T14:51:00,10-K Filing,TRUE,FALSE,Processed,32,TRUE
+JOB-00006,FDOC-25374,board_resolution_6.pdf,2026-08-11T10:32:00,Board Resolution,FALSE,TRUE,Rejected,9,FALSE
+JOB-00007,FDOC-72190,earnings_calendar_update_7.pdf,2026-07-25T12:45:00,Earnings Calendar Update,FALSE,TRUE,Rejected,5,FALSE
+JOB-00008,FDOC-89348,press_release_-_product_8.pdf,2026-06-17T07:56:00,Press Release - Product,FALSE,TRUE,Rejected,3,FALSE
+JOB-00009,FDOC-67310,board_resolution_9.pdf,2026-05-23T08:53:00,Board Resolution,FALSE,TRUE,Processed,8,FALSE
+JOB-00010,FDOC-67070,debenture_notice_10.pdf,2026-05-22T07:35:00,Debenture Notice,FALSE,TRUE,Processed,6,FALSE
+JOB-00011,FDOC-71089,10-q_filing_11.pdf,2026-01-28T11:54:00,10-Q Filing,TRUE,FALSE,Processed,27,TRUE
+JOB-00012,FDOC-35032,dividend_declaration_12.pdf,2026-07-07T15:35:00,Dividend Declaration,TRUE,FALSE,Processed,29,TRUE
+JOB-00013,FDOC-67944,director_appointment_notice_13.pdf,2026-03-24T06:12:00,Director Appointment Notice,FALSE,TRUE,Rejected,9,FALSE
+JOB-00014,FDOC-22334,quarterly_report_14.pdf,2026-01-19T10:21:00,Quarterly Report,TRUE,FALSE,Processed,28,TRUE
+JOB-00015,FDOC-94832,financial_supplement_15.pdf,2026-01-20T10:02:00,Financial Supplement,TRUE,FALSE,Processed,22,TRUE
+JOB-00016,FDOC-43166,board_resolution_16.pdf,2026-08-13T06:44:00,Board Resolution,FALSE,TRUE,Rejected,11,FALSE
+JOB-00017,FDOC-71709,earnings_release_17.pdf,2026-01-28T17:59:00,Earnings Release,TRUE,FALSE,Processed,43,TRUE
+JOB-00018,FDOC-94875,board_resolution_18.pdf,2026-08-16T08:30:00,Board Resolution,FALSE,TRUE,Processed,13,FALSE
+JOB-00019,FDOC-30079,10-k_filing_19.pdf,2026-01-12T06:39:00,10-K Filing,TRUE,FALSE,Processed,16,TRUE
+JOB-00020,FDOC-25653,10-q_filing_20.pdf,2026-02-14T19:54:00,10-Q Filing,TRUE,FALSE,Processed,8,TRUE
+JOB-00021,FDOC-81314,debenture_notice_21.pdf,2026-01-11T07:54:00,Debenture Notice,FALSE,TRUE,Rejected,14,FALSE
+JOB-00022,FDOC-51481,quarterly_report_22.pdf,2026-01-11T19:43:00,Quarterly Report,TRUE,FALSE,Processed,15,TRUE
+JOB-00023,FDOC-62844,press_release_-_financial_23.pdf,2026-06-17T06:42:00,Press Release - Financial,TRUE,FALSE,Processed,31,TRUE
+JOB-00024,FDOC-75735,board_resolution_24.pdf,2026-01-03T09:52:00,Board Resolution,FALSE,TRUE,Rejected,12,FALSE
+JOB-00025,FDOC-46113,financial_supplement_25.pdf,2026-02-06T13:02:00,Financial Supplement,TRUE,FALSE,Processed,43,TRUE
+JOB-00026,FDOC-10422,quarterly_report_26.pdf,2026-07-06T16:47:00,Quarterly Report,TRUE,FALSE,Processed,24,TRUE
+JOB-00027,FDOC-84471,financial_supplement_27.pdf,2026-06-04T11:29:00,Financial Supplement,TRUE,FALSE,Processed,10,TRUE
+JOB-00028,FDOC-21870,press_release_-_financial_28.pdf,2026-08-03T07:58:00,Press Release - Financial,TRUE,FALSE,Processed,16,TRUE
+JOB-00029,FDOC-92132,dividend_declaration_29.pdf,2026-02-06T11:37:00,Dividend Declaration,TRUE,FALSE,Processed,6,TRUE
+JOB-00030,FDOC-70338,10-q_filing_30.pdf,2026-01-07T16:23:00,10-Q Filing,TRUE,FALSE,Processed,10,TRUE
+JOB-00031,FDOC-94189,dividend_declaration_31.pdf,2026-04-10T19:43:00,Dividend Declaration,TRUE,FALSE,Processed,17,TRUE
+JOB-00032,FDOC-47627,dividend_declaration_32.pdf,2026-03-10T06:24:00,Dividend Declaration,TRUE,FALSE,Processed,16,TRUE
+JOB-00033,FDOC-39617,financial_supplement_33.pdf,2026-03-19T11:26:00,Financial Supplement,TRUE,FALSE,Processed,17,TRUE
+JOB-00034,FDOC-67619,financial_supplement_34.pdf,2026-04-06T10:16:00,Financial Supplement,TRUE,FALSE,Processed,21,TRUE
+JOB-00035,FDOC-55725,10-k_filing_35.pdf,2026-08-12T15:23:00,10-K Filing,TRUE,FALSE,Processed,38,TRUE
+JOB-00036,FDOC-60551,debenture_notice_36.pdf,2026-03-02T19:37:00,Debenture Notice,FALSE,TRUE,Rejected,9,FALSE
+JOB-00037,FDOC-94673,press_release_-_financial_37.pdf,2026-04-23T12:22:00,Press Release - Financial,TRUE,FALSE,Processed,23,TRUE
+JOB-00038,FDOC-45251,quarterly_report_38.pdf,2026-06-23T14:35:00,Quarterly Report,TRUE,FALSE,Processed,10,TRUE
+JOB-00039,FDOC-44189,press_release_-_product_39.pdf,2026-04-09T09:29:00,Press Release - Product,FALSE,TRUE,Rejected,15,FALSE
+JOB-00040,FDOC-86915,10-k_filing_40.pdf,2026-03-16T08:29:00,10-K Filing,TRUE,FALSE,Processed,25,TRUE
+JOB-00041,FDOC-14436,director_appointment_notice_41.pdf,2026-07-22T15:57:00,Director Appointment Notice,FALSE,TRUE,Rejected,12,FALSE
+JOB-00042,FDOC-30807,10-k_filing_42.pdf,2026-06-28T20:00:00,10-K Filing,TRUE,FALSE,Processed,31,TRUE
+JOB-00043,FDOC-23134,debenture_notice_43.pdf,2026-06-11T16:57:00,Debenture Notice,FALSE,TRUE,Rejected,15,FALSE
+JOB-00044,FDOC-34400,director_appointment_notice_44.pdf,2026-05-06T13:34:00,Director Appointment Notice,FALSE,TRUE,Rejected,8,FALSE
+JOB-00045,FDOC-67012,press_release_-_financial_45.pdf,2026-08-19T15:44:00,Press Release - Financial,TRUE,FALSE,Processed,30,TRUE
+JOB-00046,FDOC-88766,debenture_notice_46.pdf,2026-04-09T17:23:00,Debenture Notice,FALSE,TRUE,Rejected,8,FALSE
+JOB-00047,FDOC-40710,board_resolution_47.pdf,2026-07-10T06:59:00,Board Resolution,FALSE,TRUE,Processed,2,FALSE
+JOB-00048,FDOC-62527,earnings_calendar_update_48.pdf,2026-07-25T10:36:00,Earnings Calendar Update,FALSE,TRUE,Processed,1,FALSE
+JOB-00049,FDOC-78692,10-q_filing_49.pdf,2026-03-10T20:38:00,10-Q Filing,TRUE,FALSE,Processed,17,TRUE
+JOB-00050,FDOC-17051,press_release_-_financial_50.pdf,2026-03-05T16:21:00,Press Release - Financial,TRUE,FALSE,Processed,10,TRUE
+JOB-00051,FDOC-61903,financial_supplement_51.pdf,2026-03-26T11:29:00,Financial Supplement,TRUE,FALSE,Processed,15,TRUE
+JOB-00052,FDOC-32553,debenture_notice_52.pdf,2026-01-22T08:12:00,Debenture Notice,FALSE,TRUE,Rejected,5,FALSE
+JOB-00053,FDOC-67219,10-k_filing_53.pdf,2026-03-08T19:13:00,10-K Filing,TRUE,FALSE,Processed,10,TRUE
+JOB-00054,FDOC-59054,dividend_declaration_54.pdf,2026-04-05T16:35:00,Dividend Declaration,TRUE,FALSE,Processed,5,TRUE
+JOB-00055,FDOC-82067,debenture_notice_55.pdf,2026-03-12T07:30:00,Debenture Notice,FALSE,TRUE,Processed,7,FALSE
+JOB-00056,FDOC-70749,dividend_declaration_56.pdf,2026-04-16T16:24:00,Dividend Declaration,TRUE,FALSE,Processed,20,TRUE
+JOB-00057,FDOC-27501,10-k_filing_57.pdf,2026-07-05T11:48:00,10-K Filing,TRUE,FALSE,Processed,30,TRUE
+JOB-00058,FDOC-65652,director_appointment_notice_58.pdf,2026-05-27T16:46:00,Director Appointment Notice,FALSE,TRUE,Processed,7,FALSE
+JOB-00059,FDOC-86864,press_release_-_product_59.pdf,2026-02-12T13:42:00,Press Release - Product,FALSE,TRUE,Rejected,4,FALSE
+JOB-00060,FDOC-57484,press_release_-_financial_60.pdf,2026-03-25T09:23:00,Press Release - Financial,TRUE,FALSE,Processed,26,TRUE
+JOB-00061,FDOC-62190,press_release_-_product_61.pdf,2026-01-20T15:48:00,Press Release - Product,FALSE,TRUE,Rejected,11,FALSE
+JOB-00062,FDOC-37686,quarterly_report_62.pdf,2026-03-16T09:02:00,Quarterly Report,TRUE,FALSE,Processed,24,TRUE
+JOB-00063,FDOC-33576,earnings_calendar_update_63.pdf,2026-02-11T12:41:00,Earnings Calendar Update,FALSE,TRUE,Rejected,3,FALSE
+JOB-00064,FDOC-73000,financial_supplement_64.pdf,2026-05-13T16:52:00,Financial Supplement,TRUE,FALSE,Processed,7,TRUE
+JOB-00065,FDOC-99435,financial_supplement_65.pdf,2026-07-06T08:25:00,Financial Supplement,TRUE,FALSE,Processed,38,TRUE
+JOB-00066,FDOC-99923,10-k_filing_66.pdf,2026-08-26T07:22:00,10-K Filing,TRUE,FALSE,Processed,11,TRUE
+JOB-00067,FDOC-31087,board_resolution_67.pdf,2026-07-26T18:00:00,Board Resolution,FALSE,TRUE,Rejected,3,FALSE
+JOB-00068,FDOC-73719,press_release_-_financial_68.pdf,2026-07-22T13:00:00,Press Release - Financial,TRUE,FALSE,Processed,30,TRUE
+JOB-00069,FDOC-93115,earnings_calendar_update_69.pdf,2026-01-10T12:16:00,Earnings Calendar Update,FALSE,TRUE,Rejected,10,FALSE
+JOB-00070,FDOC-53917,debenture_notice_70.pdf,2026-06-25T13:45:00,Debenture Notice,FALSE,TRUE,Processed,6,FALSE
+JOB-00071,FDOC-60262,10-k_filing_71.pdf,2026-03-14T14:48:00,10-K Filing,TRUE,FALSE,Processed,10,TRUE
+JOB-00072,FDOC-87352,10-q_filing_72.pdf,2026-01-11T20:45:00,10-Q Filing,TRUE,FALSE,Processed,21,TRUE
+JOB-00073,FDOC-46924,quarterly_report_73.pdf,2026-08-14T06:29:00,Quarterly Report,TRUE,FALSE,Processed,7,TRUE
+JOB-00074,FDOC-88555,10-k_filing_74.pdf,2026-08-15T11:03:00,10-K Filing,TRUE,FALSE,Processed,28,TRUE
+JOB-00075,FDOC-13084,financial_supplement_75.pdf,2026-07-11T16:18:00,Financial Supplement,TRUE,FALSE,Processed,39,TRUE
+JOB-00076,FDOC-12296,financial_supplement_76.pdf,2026-03-10T11:26:00,Financial Supplement,TRUE,FALSE,Processed,33,TRUE
+JOB-00077,FDOC-24638,director_appointment_notice_77.pdf,2026-05-21T06:38:00,Director Appointment Notice,FALSE,TRUE,Rejected,12,FALSE
+JOB-00078,FDOC-80121,earnings_release_78.pdf,2026-07-08T08:05:00,Earnings Release,TRUE,FALSE,Processed,11,TRUE
+JOB-00079,FDOC-46004,10-q_filing_79.pdf,2026-03-21T13:27:00,10-Q Filing,TRUE,FALSE,Processed,27,TRUE
+JOB-00080,FDOC-78623,debenture_notice_80.pdf,2026-04-27T20:53:00,Debenture Notice,FALSE,TRUE,Processed,8,FALSE
+JOB-00081,FDOC-29234,earnings_release_81.pdf,2026-02-11T11:02:00,Earnings Release,TRUE,FALSE,Processed,43,TRUE
+JOB-00082,FDOC-20323,dividend_declaration_82.pdf,2026-02-13T14:46:00,Dividend Declaration,TRUE,FALSE,Processed,26,TRUE
+JOB-00083,FDOC-34108,board_resolution_83.pdf,2026-05-14T12:01:00,Board Resolution,FALSE,TRUE,Processed,5,FALSE
+JOB-00084,FDOC-25260,dividend_declaration_84.pdf,2026-02-27T20:27:00,Dividend Declaration,TRUE,FALSE,Processed,17,TRUE
+JOB-00085,FDOC-80668,press_release_-_financial_85.pdf,2026-05-10T15:32:00,Press Release - Financial,TRUE,FALSE,Processed,20,TRUE
+JOB-00086,FDOC-38207,dividend_declaration_86.pdf,2026-01-12T15:30:00,Dividend Declaration,TRUE,FALSE,Processed,32,TRUE
+JOB-00087,FDOC-15995,financial_supplement_87.pdf,2026-03-09T14:42:00,Financial Supplement,TRUE,FALSE,Processed,43,TRUE
+JOB-00088,FDOC-10662,earnings_calendar_update_88.pdf,2026-03-22T10:17:00,Earnings Calendar Update,FALSE,TRUE,Rejected,4,FALSE
+JOB-00089,FDOC-45003,earnings_release_89.pdf,2026-07-22T08:17:00,Earnings Release,TRUE,FALSE,Processed,34,TRUE
+JOB-00090,FDOC-12368,press_release_-_financial_90.pdf,2026-06-04T09:14:00,Press Release - Financial,TRUE,FALSE,Processed,25,TRUE
+JOB-00091,FDOC-89864,quarterly_report_91.pdf,2026-02-20T10:46:00,Quarterly Report,TRUE,FALSE,Processed,34,TRUE
+JOB-00092,FDOC-80969,press_release_-_financial_92.pdf,2026-07-21T15:21:00,Press Release - Financial,TRUE,FALSE,Processed,29,TRUE
+JOB-00093,FDOC-55398,debenture_notice_93.pdf,2026-01-11T11:20:00,Debenture Notice,FALSE,TRUE,Rejected,3,FALSE
+JOB-00094,FDOC-32283,debenture_notice_94.pdf,2026-08-07T14:44:00,Debenture Notice,FALSE,TRUE,Processed,7,FALSE
+JOB-00095,FDOC-84883,financial_supplement_95.pdf,2026-07-02T16:54:00,Financial Supplement,TRUE,FALSE,Processed,10,TRUE
+JOB-00096,FDOC-37204,board_resolution_96.pdf,2026-08-18T11:05:00,Board Resolution,FALSE,TRUE,Processed,9,FALSE
+JOB-00097,FDOC-69178,director_appointment_notice_97.pdf,2026-05-10T18:20:00,Director Appointment Notice,FALSE,TRUE,Processed,8,FALSE
+JOB-00098,FDOC-91823,earnings_release_98.pdf,2026-03-20T15:10:00,Earnings Release,TRUE,FALSE,Processed,27,TRUE
+JOB-00099,FDOC-47209,press_release_-_financial_99.pdf,2026-07-14T18:01:00,Press Release - Financial,TRUE,FALSE,Processed,40,TRUE
+JOB-00100,FDOC-80463,dividend_declaration_100.pdf,2026-08-08T12:58:00,Dividend Declaration,TRUE,FALSE,Processed,13,TRUE
+JOB-00101,FDOC-37696,earnings_calendar_update_101.pdf,2026-02-04T12:13:00,Earnings Calendar Update,FALSE,TRUE,Rejected,10,FALSE
+JOB-00102,FDOC-62575,financial_supplement_102.pdf,2026-03-28T08:49:00,Financial Supplement,TRUE,FALSE,Processed,40,TRUE
+JOB-00103,FDOC-88544,earnings_calendar_update_103.pdf,2026-06-25T09:26:00,Earnings Calendar Update,FALSE,TRUE,Rejected,6,FALSE
+JOB-00104,FDOC-92984,director_appointment_notice_104.pdf,2026-02-22T20:43:00,Director Appointment Notice,FALSE,TRUE,Processed,6,FALSE
+JOB-00105,FDOC-74858,press_release_-_product_105.pdf,2026-07-08T19:25:00,Press Release - Product,FALSE,TRUE,Rejected,5,FALSE
+JOB-00106,FDOC-47802,debenture_notice_106.pdf,2026-03-28T08:25:00,Debenture Notice,FALSE,TRUE,Rejected,9,FALSE
+JOB-00107,FDOC-22887,director_appointment_notice_107.pdf,2026-08-21T08:43:00,Director Appointment Notice,FALSE,TRUE,Rejected,10,FALSE
+JOB-00108,FDOC-93416,board_resolution_108.pdf,2026-07-14T12:12:00,Board Resolution,FALSE,TRUE,Rejected,10,FALSE
+JOB-00109,FDOC-20552,quarterly_report_109.pdf,2026-03-20T15:32:00,Quarterly Report,TRUE,FALSE,Processed,43,TRUE
+JOB-00110,FDOC-42760,press_release_-_financial_110.pdf,2026-07-01T11:39:00,Press Release - Financial,TRUE,FALSE,Processed,15,TRUE
+JOB-00111,FDOC-12977,press_release_-_financial_111.pdf,2026-08-22T07:23:00,Press Release - Financial,TRUE,FALSE,Processed,43,TRUE
+JOB-00112,FDOC-35301,board_resolution_112.pdf,2026-07-18T14:55:00,Board Resolution,FALSE,TRUE,Rejected,8,FALSE
+JOB-00113,FDOC-36186,director_appointment_notice_113.pdf,2026-04-06T13:59:00,Director Appointment Notice,FALSE,TRUE,Rejected,3,FALSE
+JOB-00114,FDOC-70447,financial_supplement_114.pdf,2026-02-01T09:36:00,Financial Supplement,TRUE,FALSE,Processed,34,TRUE
+JOB-00115,FDOC-70477,quarterly_report_115.pdf,2026-08-08T18:11:00,Quarterly Report,TRUE,FALSE,Processed,37,TRUE
+JOB-00116,FDOC-53418,board_resolution_116.pdf,2026-02-26T15:53:00,Board Resolution,FALSE,TRUE,Rejected,4,FALSE
+JOB-00117,FDOC-99394,debenture_notice_117.pdf,2026-02-01T17:02:00,Debenture Notice,FALSE,TRUE,Processed,7,FALSE
+JOB-00118,FDOC-64668,press_release_-_product_118.pdf,2026-08-28T12:04:00,Press Release - Product,FALSE,TRUE,Rejected,15,FALSE
+JOB-00119,FDOC-94815,dividend_declaration_119.pdf,2026-02-23T18:38:00,Dividend Declaration,TRUE,FALSE,Processed,39,TRUE
+JOB-00120,FDOC-17836,dividend_declaration_120.pdf,2026-01-15T13:52:00,Dividend Declaration,TRUE,FALSE,Processed,23,TRUE
+JOB-00121,FDOC-77051,earnings_calendar_update_121.pdf,2026-01-12T12:45:00,Earnings Calendar Update,FALSE,TRUE,Processed,11,FALSE
+JOB-00122,FDOC-29134,debenture_notice_122.pdf,2026-07-26T07:06:00,Debenture Notice,FALSE,TRUE,Rejected,13,FALSE
+JOB-00123,FDOC-64118,press_release_-_financial_123.pdf,2026-02-24T08:23:00,Press Release - Financial,TRUE,FALSE,Processed,26,TRUE
+JOB-00124,FDOC-44669,10-q_filing_124.pdf,2026-04-26T13:13:00,10-Q Filing,TRUE,FALSE,Processed,11,TRUE
+JOB-00125,FDOC-74431,director_appointment_notice_125.pdf,2026-02-15T20:45:00,Director Appointment Notice,FALSE,TRUE,Rejected,13,FALSE
+JOB-00126,FDOC-53340,financial_supplement_126.pdf,2026-06-10T17:28:00,Financial Supplement,TRUE,FALSE,Processed,33,TRUE
+JOB-00127,FDOC-14685,dividend_declaration_127.pdf,2026-05-19T10:38:00,Dividend Declaration,TRUE,FALSE,Processed,13,TRUE
+JOB-00128,FDOC-58608,10-q_filing_128.pdf,2026-05-01T09:56:00,10-Q Filing,TRUE,FALSE,Processed,41,TRUE
+JOB-00129,FDOC-84401,director_appointment_notice_129.pdf,2026-05-10T17:10:00,Director Appointment Notice,FALSE,TRUE,Processed,5,FALSE
+JOB-00130,FDOC-26849,debenture_notice_130.pdf,2026-08-22T10:09:00,Debenture Notice,FALSE,TRUE,Rejected,10,FALSE
+JOB-00131,FDOC-13670,financial_supplement_131.pdf,2026-07-09T16:14:00,Financial Supplement,TRUE,FALSE,Processed,18,TRUE
+JOB-00132,FDOC-44002,press_release_-_financial_132.pdf,2026-05-05T15:00:00,Press Release - Financial,TRUE,FALSE,Processed,28,TRUE
+JOB-00133,FDOC-32335,dividend_declaration_133.pdf,2026-07-16T15:57:00,Dividend Declaration,TRUE,FALSE,Processed,27,TRUE
+JOB-00134,FDOC-51195,board_resolution_134.pdf,2026-03-19T19:32:00,Board Resolution,FALSE,TRUE,Processed,6,FALSE
+JOB-00135,FDOC-78843,earnings_calendar_update_135.pdf,2026-08-21T08:55:00,Earnings Calendar Update,FALSE,TRUE,Rejected,3,FALSE
+JOB-00136,FDOC-54874,debenture_notice_136.pdf,2026-07-01T16:04:00,Debenture Notice,FALSE,TRUE,Rejected,5,FALSE
+JOB-00137,FDOC-25675,quarterly_report_137.pdf,2026-04-05T10:38:00,Quarterly Report,TRUE,FALSE,Processed,17,TRUE
+JOB-00138,FDOC-93707,director_appointment_notice_138.pdf,2026-08-15T15:58:00,Director Appointment Notice,FALSE,TRUE,Rejected,14,FALSE
+JOB-00139,FDOC-97063,dividend_declaration_139.pdf,2026-04-24T09:23:00,Dividend Declaration,TRUE,FALSE,Processed,7,TRUE
+JOB-00140,FDOC-45582,earnings_calendar_update_140.pdf,2026-02-11T14:04:00,Earnings Calendar Update,FALSE,TRUE,Processed,9,FALSE
+JOB-00141,FDOC-84278,dividend_declaration_141.pdf,2026-02-26T06:28:00,Dividend Declaration,TRUE,FALSE,Processed,38,TRUE
+JOB-00142,FDOC-33944,quarterly_report_142.pdf,2026-04-09T18:47:00,Quarterly Report,TRUE,FALSE,Processed,20,TRUE
+JOB-00143,FDOC-44834,quarterly_report_143.pdf,2026-08-06T06:38:00,Quarterly Report,TRUE,FALSE,Processed,40,TRUE
+JOB-00144,FDOC-18345,financial_supplement_144.pdf,2026-02-24T09:46:00,Financial Supplement,TRUE,FALSE,Processed,13,TRUE
+JOB-00145,FDOC-41973,press_release_-_product_145.pdf,2026-05-02T09:14:00,Press Release - Product,FALSE,TRUE,Processed,13,FALSE
+JOB-00146,FDOC-16695,press_release_-_financial_146.pdf,2026-08-15T07:34:00,Press Release - Financial,TRUE,FALSE,Processed,25,TRUE
+JOB-00147,FDOC-67920,board_resolution_147.pdf,2026-02-07T13:07:00,Board Resolution,FALSE,TRUE,Rejected,8,FALSE
+JOB-00148,FDOC-88419,quarterly_report_148.pdf,2026-02-18T15:13:00,Quarterly Report,TRUE,FALSE,Processed,36,TRUE
+JOB-00149,FDOC-24617,financial_supplement_149.pdf,2026-01-19T12:55:00,Financial Supplement,TRUE,FALSE,Processed,33,TRUE
+JOB-00150,FDOC-90532,board_resolution_150.pdf,2026-04-19T18:40:00,Board Resolution,FALSE,TRUE,Rejected,1,FALSE
+JOB-00151,FDOC-92723,financial_supplement_151.pdf,2026-07-20T10:31:00,Financial Supplement,TRUE,FALSE,Processed,16,TRUE
+JOB-00152,FDOC-49274,director_appointment_notice_152.pdf,2026-08-17T10:41:00,Director Appointment Notice,FALSE,TRUE,Rejected,14,FALSE
+JOB-00153,FDOC-83566,press_release_-_product_153.pdf,2026-04-11T10:43:00,Press Release - Product,FALSE,TRUE,Processed,5,FALSE
+JOB-00154,FDOC-73908,board_resolution_154.pdf,2026-08-04T18:11:00,Board Resolution,FALSE,TRUE,Rejected,6,FALSE
+JOB-00155,FDOC-18593,press_release_-_product_155.pdf,2026-08-16T08:11:00,Press Release - Product,FALSE,TRUE,Rejected,11,FALSE
+JOB-00156,FDOC-93608,financial_supplement_156.pdf,2026-02-28T13:21:00,Financial Supplement,TRUE,FALSE,Processed,39,TRUE
+JOB-00157,FDOC-40382,10-q_filing_157.pdf,2026-04-25T07:48:00,10-Q Filing,TRUE,FALSE,Processed,18,TRUE
+JOB-00158,FDOC-71849,financial_supplement_158.pdf,2026-05-11T18:33:00,Financial Supplement,TRUE,FALSE,Processed,11,TRUE
+JOB-00159,FDOC-98065,board_resolution_159.pdf,2026-05-20T09:36:00,Board Resolution,FALSE,TRUE,Rejected,6,FALSE
+JOB-00160,FDOC-32515,10-q_filing_160.pdf,2026-04-25T12:50:00,10-Q Filing,TRUE,FALSE,Processed,15,TRUE
+JOB-00161,FDOC-95654,press_release_-_financial_161.pdf,2026-03-11T14:30:00,Press Release - Financial,TRUE,FALSE,Processed,43,TRUE
+JOB-00162,FDOC-71863,earnings_calendar_update_162.pdf,2026-05-08T20:16:00,Earnings Calendar Update,FALSE,TRUE,Rejected,6,FALSE
+JOB-00163,FDOC-51333,10-q_filing_163.pdf,2026-05-11T17:22:00,10-Q Filing,TRUE,FALSE,Processed,33,TRUE
+JOB-00164,FDOC-64673,financial_supplement_164.pdf,2026-07-19T12:48:00,Financial Supplement,TRUE,FALSE,Processed,5,TRUE
+JOB-00165,FDOC-28340,earnings_calendar_update_165.pdf,2026-01-14T11:41:00,Earnings Calendar Update,FALSE,TRUE,Rejected,13,FALSE
+JOB-00166,FDOC-37342,financial_supplement_166.pdf,2026-01-27T17:12:00,Financial Supplement,TRUE,FALSE,Processed,21,TRUE
+JOB-00167,FDOC-60122,financial_supplement_167.pdf,2026-06-01T11:27:00,Financial Supplement,TRUE,FALSE,Processed,25,TRUE
+JOB-00168,FDOC-75921,press_release_-_product_168.pdf,2026-04-26T09:39:00,Press Release - Product,FALSE,TRUE,Rejected,14,FALSE
+JOB-00169,FDOC-52661,financial_supplement_169.pdf,2026-02-03T09:10:00,Financial Supplement,TRUE,FALSE,Processed,35,TRUE
+JOB-00170,FDOC-61126,dividend_declaration_170.pdf,2026-08-02T18:42:00,Dividend Declaration,TRUE,FALSE,Processed,36,TRUE
+JOB-00171,FDOC-17774,quarterly_report_171.pdf,2026-05-20T15:24:00,Quarterly Report,TRUE,FALSE,Processed,11,TRUE
+JOB-00172,FDOC-67425,earnings_release_172.pdf,2026-06-09T14:23:00,Earnings Release,TRUE,FALSE,Processed,23,TRUE
+JOB-00173,FDOC-19697,10-k_filing_173.pdf,2026-08-05T20:47:00,10-K Filing,TRUE,FALSE,Processed,25,TRUE
+JOB-00174,FDOC-29715,dividend_declaration_174.pdf,2026-07-27T08:55:00,Dividend Declaration,TRUE,FALSE,Processed,42,TRUE
+JOB-00175,FDOC-42142,financial_supplement_175.pdf,2026-04-18T07:28:00,Financial Supplement,TRUE,FALSE,Processed,25,TRUE
+JOB-00176,FDOC-48196,press_release_-_financial_176.pdf,2026-05-18T14:52:00,Press Release - Financial,TRUE,FALSE,Processed,6,TRUE
+JOB-00177,FDOC-51151,10-q_filing_177.pdf,2026-02-28T18:44:00,10-Q Filing,TRUE,FALSE,Processed,28,TRUE
+JOB-00178,FDOC-39842,debenture_notice_178.pdf,2026-04-06T11:29:00,Debenture Notice,FALSE,TRUE,Rejected,6,FALSE
+JOB-00179,FDOC-43470,director_appointment_notice_179.pdf,2026-04-22T17:16:00,Director Appointment Notice,FALSE,TRUE,Processed,12,FALSE
+JOB-00180,FDOC-66011,earnings_release_180.pdf,2026-03-04T16:26:00,Earnings Release,TRUE,FALSE,Processed,30,TRUE
+JOB-00181,FDOC-77143,debenture_notice_181.pdf,2026-01-27T14:03:00,Debenture Notice,FALSE,TRUE,Rejected,1,FALSE
+JOB-00182,FDOC-52869,press_release_-_financial_182.pdf,2026-07-02T14:55:00,Press Release - Financial,TRUE,FALSE,Processed,39,TRUE
+JOB-00183,FDOC-18796,debenture_notice_183.pdf,2026-05-19T11:40:00,Debenture Notice,FALSE,TRUE,Processed,2,FALSE
+JOB-00184,FDOC-79699,press_release_-_financial_184.pdf,2026-02-18T18:07:00,Press Release - Financial,TRUE,FALSE,Processed,15,TRUE
+JOB-00185,FDOC-89958,press_release_-_product_185.pdf,2026-02-19T20:29:00,Press Release - Product,FALSE,TRUE,Processed,4,FALSE
+JOB-00186,FDOC-69151,10-k_filing_186.pdf,2026-07-27T10:29:00,10-K Filing,TRUE,FALSE,Processed,14,TRUE
+JOB-00187,FDOC-85395,board_resolution_187.pdf,2026-06-03T08:41:00,Board Resolution,FALSE,TRUE,Rejected,8,FALSE
+JOB-00188,FDOC-48510,press_release_-_product_188.pdf,2026-07-01T12:36:00,Press Release - Product,FALSE,TRUE,Rejected,10,FALSE
+JOB-00189,FDOC-65987,earnings_calendar_update_189.pdf,2026-01-01T09:20:00,Earnings Calendar Update,FALSE,TRUE,Rejected,5,FALSE
+JOB-00190,FDOC-97215,quarterly_report_190.pdf,2026-06-18T13:41:00,Quarterly Report,TRUE,FALSE,Processed,17,TRUE
+JOB-00191,FDOC-30002,press_release_-_financial_191.pdf,2026-06-23T19:36:00,Press Release - Financial,TRUE,FALSE,Processed,17,TRUE
+JOB-00192,FDOC-13437,10-q_filing_192.pdf,2026-04-10T08:06:00,10-Q Filing,TRUE,FALSE,Processed,39,TRUE
+JOB-00193,FDOC-55681,press_release_-_financial_193.pdf,2026-01-25T08:34:00,Press Release - Financial,TRUE,FALSE,Processed,9,TRUE
+JOB-00194,FDOC-36437,director_appointment_notice_194.pdf,2026-06-08T16:13:00,Director Appointment Notice,FALSE,TRUE,Rejected,3,FALSE
+JOB-00195,FDOC-38473,earnings_calendar_update_195.pdf,2026-05-08T20:58:00,Earnings Calendar Update,FALSE,TRUE,Rejected,1,FALSE
+JOB-00196,FDOC-13332,10-q_filing_196.pdf,2026-08-04T19:24:00,10-Q Filing,TRUE,FALSE,Processed,33,TRUE
+JOB-00197,FDOC-67481,dividend_declaration_197.pdf,2026-04-13T06:28:00,Dividend Declaration,TRUE,FALSE,Processed,30,TRUE
+JOB-00198,FDOC-26338,quarterly_report_198.pdf,2026-04-25T12:37:00,Quarterly Report,TRUE,FALSE,Processed,10,TRUE
+JOB-00199,FDOC-25775,10-q_filing_199.pdf,2026-02-06T18:13:00,10-Q Filing,TRUE,FALSE,Processed,36,TRUE
+JOB-00200,FDOC-35032,dividend_declaration_200.pdf,2026-06-24T11:26:00,Dividend Declaration,TRUE,FALSE,Processed,18,TRUE
+JOB-00201,FDOC-24679,10-k_filing_201.pdf,2026-06-16T10:32:00,10-K Filing,TRUE,FALSE,Processed,34,TRUE
+JOB-00202,FDOC-62469,earnings_release_202.pdf,2026-01-13T18:26:00,Earnings Release,TRUE,FALSE,Processed,11,TRUE
+JOB-00203,FDOC-66904,director_appointment_notice_203.pdf,2026-06-10T19:04:00,Director Appointment Notice,FALSE,TRUE,Processed,5,FALSE
+JOB-00204,FDOC-61076,quarterly_report_204.pdf,2026-02-21T16:51:00,Quarterly Report,TRUE,FALSE,Processed,35,TRUE
+JOB-00205,FDOC-52371,earnings_release_205.pdf,2026-05-24T16:57:00,Earnings Release,TRUE,FALSE,Processed,7,TRUE
+JOB-00206,FDOC-26770,10-q_filing_206.pdf,2026-04-06T15:00:00,10-Q Filing,TRUE,FALSE,Processed,38,TRUE
+JOB-00207,FDOC-15110,10-q_filing_207.pdf,2026-03-23T13:48:00,10-Q Filing,TRUE,FALSE,Processed,8,TRUE
+JOB-00208,FDOC-48415,press_release_-_financial_208.pdf,2026-04-28T17:42:00,Press Release - Financial,TRUE,FALSE,Processed,28,TRUE
+JOB-00209,FDOC-32599,press_release_-_financial_209.pdf,2026-07-27T08:26:00,Press Release - Financial,TRUE,FALSE,Processed,16,TRUE
+JOB-00210,FDOC-97643,press_release_-_product_210.pdf,2026-03-24T18:51:00,Press Release - Product,FALSE,TRUE,Rejected,6,FALSE
+JOB-00211,FDOC-50116,10-k_filing_211.pdf,2026-03-01T13:13:00,10-K Filing,TRUE,FALSE,Processed,30,TRUE
+JOB-00212,FDOC-52083,board_resolution_212.pdf,2026-06-27T10:39:00,Board Resolution,FALSE,TRUE,Rejected,13,FALSE
+JOB-00213,FDOC-14485,earnings_release_213.pdf,2026-06-01T20:30:00,Earnings Release,TRUE,FALSE,Processed,14,TRUE
+JOB-00214,FDOC-88447,earnings_calendar_update_214.pdf,2026-01-18T12:48:00,Earnings Calendar Update,FALSE,TRUE,Processed,9,FALSE
+JOB-00215,FDOC-39189,10-q_filing_215.pdf,2026-03-04T06:22:00,10-Q Filing,TRUE,FALSE,Processed,10,TRUE
+JOB-00216,FDOC-64404,earnings_calendar_update_216.pdf,2026-02-04T13:29:00,Earnings Calendar Update,FALSE,TRUE,Processed,8,FALSE
+JOB-00217,FDOC-43667,10-q_filing_217.pdf,2026-01-10T13:30:00,10-Q Filing,TRUE,FALSE,Processed,13,TRUE
+JOB-00218,FDOC-22635,director_appointment_notice_218.pdf,2026-06-20T16:45:00,Director Appointment Notice,FALSE,TRUE,Rejected,8,FALSE
+JOB-00219,FDOC-27014,dividend_declaration_219.pdf,2026-04-05T09:32:00,Dividend Declaration,TRUE,FALSE,Processed,14,TRUE
+JOB-00220,FDOC-62931,quarterly_report_220.pdf,2026-02-24T07:45:00,Quarterly Report,TRUE,FALSE,Processed,23,TRUE
+JOB-00221,FDOC-34199,press_release_-_financial_221.pdf,2026-02-08T09:16:00,Press Release - Financial,TRUE,FALSE,Processed,24,TRUE
+JOB-00222,FDOC-77751,director_appointment_notice_222.pdf,2026-08-22T15:33:00,Director Appointment Notice,FALSE,TRUE,Processed,15,FALSE
+JOB-00223,FDOC-96665,financial_supplement_223.pdf,2026-03-11T12:23:00,Financial Supplement,TRUE,FALSE,Processed,14,TRUE
+JOB-00224,FDOC-60466,press_release_-_financial_224.pdf,2026-01-24T20:51:00,Press Release - Financial,TRUE,FALSE,Processed,45,TRUE
+JOB-00225,FDOC-93182,earnings_release_225.pdf,2026-04-06T06:09:00,Earnings Release,TRUE,FALSE,Processed,7,TRUE
+JOB-00226,FDOC-84984,quarterly_report_226.pdf,2026-03-13T11:00:00,Quarterly Report,TRUE,FALSE,Processed,35,TRUE
+JOB-00227,FDOC-85654,debenture_notice_227.pdf,2026-06-07T16:55:00,Debenture Notice,FALSE,TRUE,Rejected,8,FALSE
+JOB-00228,FDOC-67653,quarterly_report_228.pdf,2026-08-20T10:34:00,Quarterly Report,TRUE,FALSE,Processed,12,TRUE
+JOB-00229,FDOC-54217,dividend_declaration_229.pdf,2026-05-21T18:32:00,Dividend Declaration,TRUE,FALSE,Processed,26,TRUE
+JOB-00230,FDOC-73878,10-q_filing_230.pdf,2026-05-11T18:55:00,10-Q Filing,TRUE,FALSE,Processed,40,TRUE
+JOB-00231,FDOC-78035,debenture_notice_231.pdf,2026-02-22T19:21:00,Debenture Notice,FALSE,TRUE,Rejected,2,FALSE
+JOB-00232,FDOC-26544,director_appointment_notice_232.pdf,2026-07-21T06:34:00,Director Appointment Notice,FALSE,TRUE,Rejected,4,FALSE
+JOB-00233,FDOC-48759,debenture_notice_233.pdf,2026-02-04T14:45:00,Debenture Notice,FALSE,TRUE,Rejected,14,FALSE
+JOB-00234,FDOC-20874,director_appointment_notice_234.pdf,2026-05-15T12:35:00,Director Appointment Notice,FALSE,TRUE,Processed,3,FALSE
+JOB-00235,FDOC-39079,earnings_calendar_update_235.pdf,2026-04-05T19:43:00,Earnings Calendar Update,FALSE,TRUE,Rejected,4,FALSE
+JOB-00236,FDOC-29892,dividend_declaration_236.pdf,2026-06-17T15:49:00,Dividend Declaration,TRUE,FALSE,Processed,41,TRUE
+JOB-00237,FDOC-80707,press_release_-_product_237.pdf,2026-01-26T14:23:00,Press Release - Product,FALSE,TRUE,Rejected,12,FALSE
+JOB-00238,FDOC-99180,press_release_-_product_238.pdf,2026-03-12T08:06:00,Press Release - Product,FALSE,TRUE,Rejected,11,FALSE
+JOB-00239,FDOC-29929,board_resolution_239.pdf,2026-04-27T20:48:00,Board Resolution,FALSE,TRUE,Processed,10,FALSE
+JOB-00240,FDOC-48862,earnings_calendar_update_240.pdf,2026-04-09T06:25:00,Earnings Calendar Update,FALSE,TRUE,Rejected,15,FALSE
+JOB-00241,FDOC-27841,press_release_-_product_241.pdf,2026-07-16T13:20:00,Press Release - Product,FALSE,TRUE,Processed,5,FALSE
+JOB-00242,FDOC-97571,earnings_release_242.pdf,2026-02-09T17:35:00,Earnings Release,TRUE,FALSE,Processed,24,TRUE
+JOB-00243,FDOC-28389,quarterly_report_243.pdf,2026-02-02T18:26:00,Quarterly Report,TRUE,FALSE,Processed,14,TRUE
+JOB-00244,FDOC-61280,debenture_notice_244.pdf,2026-03-25T18:15:00,Debenture Notice,FALSE,TRUE,Rejected,11,FALSE
+JOB-00245,FDOC-55928,earnings_calendar_update_245.pdf,2026-07-19T09:15:00,Earnings Calendar Update,FALSE,TRUE,Rejected,4,FALSE
+JOB-00246,FDOC-86798,financial_supplement_246.pdf,2026-03-13T07:46:00,Financial Supplement,TRUE,FALSE,Processed,14,TRUE
+JOB-00247,FDOC-52922,quarterly_report_247.pdf,2026-08-05T16:17:00,Quarterly Report,TRUE,FALSE,Processed,5,TRUE
+JOB-00248,FDOC-23449,board_resolution_248.pdf,2026-02-17T10:33:00,Board Resolution,FALSE,TRUE,Processed,10,FALSE
+JOB-00249,FDOC-26366,debenture_notice_249.pdf,2026-04-22T13:19:00,Debenture Notice,FALSE,TRUE,Processed,12,FALSE
+JOB-00250,FDOC-54744,press_release_-_financial_250.pdf,2026-08-05T07:56:00,Press Release - Financial,TRUE,FALSE,Processed,22,TRUE
