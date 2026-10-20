@@ -23,6 +23,7 @@ rules:
     fields: [cash_dividend, bonus_shares]
     source_clause: "PSX Correspondence Manual Form-3 (p.12): cash dividend stated 'at Rs. __ per share'; bonus 'in the proportion of __ share(s) for every __ share(s)'"
     verify: false
+    suggested_fix: "Re-enter the cash dividend as currency per share (Rs/KRW per share) and any bonus as 'N share(s) for every M share(s)'."
 
   - id: DIV-02
     description: New shares to be issued must not exceed the shares outstanding.
@@ -33,6 +34,7 @@ rules:
     fields: [cash_dividend, bonus_shares, shares_outstanding, eligible_shares]
     source_clause: "Companies Act 2017 — issue of shares / bonus shares (section to be confirmed once the Act is downloaded)"
     verify: true
+    suggested_fix: "Do not post: check whether a per-share money amount was keyed as a share quantity, then re-enter."
 
   - id: DIV-03
     description: Rs per share must equal percentage x face value.
@@ -43,6 +45,7 @@ rules:
     fields: [cash_dividend, cash_dividend_percent, face_value]
     source_clause: "PSX Correspondence Manual Form-3 (p.12): 'at Rs. __ per share i.e. __%' (percentage of face value)"
     verify: false
+    suggested_fix: "Check the Rs per share, the percentage and the face value against the filing; one of them is wrong."
 
   - id: DIV-04
     description: A percent-only dividend must be converted using the face value; missing face value -> warning.
@@ -52,6 +55,7 @@ rules:
     fields: [cash_dividend, cash_dividend_percent, face_value]
     source_clause: "PSX Correspondence Manual Form-3 (p.12) requires both the Rs per share and the % figure"
     verify: false
+    suggested_fix: "Confirm the face value (PSX company profile or a filing stating both Rs and %), then convert the percentage."
 
   - id: DIV-05
     description: Amount in a dividend credit notice must equal the amount declared for the same company and period.
@@ -64,6 +68,7 @@ rules:
     fields: [cash_dividend]
     source_clause: "PSX Regulations 5.6.10 (p.80) payment of dividend; Correspondence Manual Form-9/Form-10 (p.22-23) credit '@ Rs. __ per share ... announced by the Board'"
     verify: false
+    suggested_fix: "Compare the credit notice with the board declaration; the credited amount must match before posting."
 
   - id: DIV-06
     description: Ex-price must equal previous close minus the entitlement (only when both prices are supplied).
@@ -74,6 +79,7 @@ rules:
     fields: [prev_close_price, ex_price, cash_dividend]
     source_clause: "PSX Regulations 10.6 (p.154) determining ex-price of security on book closure"
     verify: false
+    suggested_fix: "Recompute the ex-price as previous close minus the entitlement."
 
   - id: DIV-07
     description: Total payout (per share x shares outstanding) should be plausible against reported profit.
@@ -84,6 +90,7 @@ rules:
     fields: [cash_dividend, shares_outstanding, profit_after_tax]
     source_clause: "Companies Act 2017 — dividends payable out of profits (section to be confirmed once the Act is downloaded)"
     verify: true
+    suggested_fix: "Check the dividend per share and shares outstanding; the payout looks large against reported profit."
 
   - id: DIV-08
     description: Dividend change versus the previous period of the same company should not exceed the configured ratio.
@@ -94,17 +101,20 @@ rules:
     fields: [cash_dividend]
     source_clause: "Dataset sanity check (team heuristic, not a rulebook clause)"
     verify: false
+    suggested_fix: "Confirm the dividend amount with the filing; it changed sharply from the previous period."
 
   - id: DIV-09
     description: All five announcement items should be present (cash dividend, bonus, right shares, other entitlement, other price-sensitive information).
     severity: warning
     check: announcement_items_present
+    scope: primary                      # only the track that carries the cover-letter announcement
     params:
       applies_to: [Financial Results, Dividend Declaration]
       items: [item_cash_dividend, item_bonus_shares, item_right_shares, item_other_entitlement, item_price_sensitive]
     fields: [item_cash_dividend, item_bonus_shares, item_right_shares, item_other_entitlement, item_price_sensitive]
     source_clause: "PSX Correspondence Manual Form-3 (p.12) items (i)-(v) (joined by AND/OR); PSX Regulations 5.6.1(a)(iii) (p.78)"
     verify: false
+    suggested_fix: "Ask the company for the missing announcement items or confirm they are NIL."
 
   - id: DIV-10
     description: Book-closure dates must be ordered and start after the announcement date.
@@ -114,3 +124,4 @@ rules:
     fields: [announcement_date, book_closure_from, book_closure_to]
     source_clause: "PSX Regulations 5.5.11(a) (p.77): minimum seven days' notice to the Exchange prior to closure of share transfer books"
     verify: false
+    suggested_fix: "Check the book-closure dates against the announcement date."

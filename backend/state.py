@@ -44,6 +44,7 @@ class RuleResult(BaseModel):
     source_clause: str = ""
     verify: bool = False            # clause text not yet confirmed against the PDF
     fields: list[str] = []          # fields the rule looked at (used by the resolver)
+    suggested_fix: str = ""
 
 
 class Track(BaseModel):

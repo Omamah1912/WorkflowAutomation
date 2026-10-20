@@ -1,0 +1,44 @@
+{
+  "doc_id": "FIX-SAMSUNG-2018",
+  "label": "Reconstruction from public reporting",
+  "company": "Samsung Securities",
+  "description": "Dividend payment instruction (corporate action instruction) as entered into the system, April 2018. Reconstructed only from publicly reported figures.",
+  "event": "April 2018: a cash dividend of 1,000 won per share to employee shareholders was entered as 1,000 shares per share and approved; 2,812,950,000 shares that did not exist were credited to 2,018 employee accounts.",
+  "sources": [
+    "https://www.khan.co.kr/en/article/202608121706037",
+    "https://www.koreajoongangdaily.com/business/samsung-securities-ordered-to-pay-19-billion-won-over-2018-ghost-stock-error/12820504",
+    "https://www.koreajoongangdaily.com/business/samsung-securities-ceo-resigns-over-blunder/10435625",
+    "https://www.irishexaminer.com/breakingnews/business/samsung-in-270m-fat-finger-bungle-836736.html",
+    "https://www.brecorder.com/news/amp/40419729"
+  ],
+  "fields": [
+    {
+      "name": "cash_dividend",
+      "value": 1000,
+      "unit": "shares per share",
+      "evidence": "Reported: the 1,000 won per share dividend was keyed in as 1,000 shares per share (the instruction that was approved).",
+      "source_url": "https://www.irishexaminer.com/breakingnews/business/samsung-in-270m-fat-finger-bungle-836736.html"
+    },
+    {
+      "name": "declared_cash_dividend",
+      "value": 1000,
+      "unit": "KRW per share",
+      "evidence": "Reported: the dividend actually declared was 1,000 won per share.",
+      "source_url": "https://www.irishexaminer.com/breakingnews/business/samsung-in-270m-fat-finger-bungle-836736.html"
+    },
+    {
+      "name": "eligible_shares",
+      "value": 2812950,
+      "unit": "shares",
+      "evidence": "Reported: employee-held shares receiving the dividend (2,812,950 x 1,000 = 2,812,950,000 shares issued in error).",
+      "source_url": "https://www.koreajoongangdaily.com/business/samsung-securities-ceo-resigns-over-blunder/10435625"
+    },
+    {
+      "name": "shares_outstanding",
+      "value": 89000000,
+      "unit": "shares",
+      "evidence": "Reported: about 89 million shares outstanding (the ghost shares were ~31x this).",
+      "source_url": "https://www.koreajoongangdaily.com/business/samsung-securities-ceo-resigns-over-blunder/10435625"
+    }
+  ]
+}

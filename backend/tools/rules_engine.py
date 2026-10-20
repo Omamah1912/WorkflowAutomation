@@ -27,6 +27,8 @@ def evaluate(relative_path: str, ctx: dict) -> list[RuleResult]:
         doc_type = ctx["doc"].doc_type
         if applies_to and doc_type not in applies_to:
             status, message, expected, actual = NA, f"not applicable to {doc_type}", None, None
+        elif rule.get("scope") == "primary" and not ctx.get("is_primary", True):
+            status, message, expected, actual = NA, "announcement rule: judged on the primary track only", None, None
         else:
             status, message, expected, actual = CHECKS[rule["check"]](ctx, rule.get("params", {}))
         results.append(RuleResult(
@@ -34,7 +36,7 @@ def evaluate(relative_path: str, ctx: dict) -> list[RuleResult]:
             passed=None if status == NA else status == "pass",
             severity=rule["severity"], message=message, expected=expected, actual=actual,
             source_clause=rule.get("source_clause", ""), verify=bool(rule.get("verify", False)),
-            fields=rule.get("fields", []),
+            fields=rule.get("fields", []), suggested_fix=rule.get("suggested_fix", ""),
         ))
     return results
 

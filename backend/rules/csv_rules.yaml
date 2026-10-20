@@ -18,6 +18,7 @@ rules:
     fields: [doc_type]
     source_clause: "Dataset: CLAUDE.md 5.1 (ps07 relevant/irrelevant lists); ps01 mapping is a team decision"
     verify: false
+    suggested_fix: "Assign a known document type so relevance can be decided."
 
   - id: CSV-02
     description: Required metadata present and dates normalised to ISO 8601.
@@ -31,6 +32,7 @@ rules:
     fields: [metadata]
     source_clause: "Dataset schema: CLAUDE.md 5.1"
     verify: false
+    suggested_fix: "Fill the missing metadata or fix the date format."
 
   - id: CSV-03
     description: Not a duplicate (same document_id, same sha256, or fuzzy company + type + period).
@@ -40,6 +42,7 @@ rules:
     fields: [duplicate_of]
     source_clause: "Dataset: CLAUDE.md 5.1 (known duplicate FDOC-35032)"
     verify: false
+    suggested_fix: "Link to the original and discard this copy."
 
   - id: CSV-04
     description: Agent stream agrees with the legacy assigned_stream (disagreements are logged, not enforced).
@@ -49,3 +52,4 @@ rules:
     fields: [stream, legacy_stream]
     source_clause: "Dataset: ps01 assigned_stream is inconsistent legacy routing (CLAUDE.md 5.1)"
     verify: false
+    suggested_fix: "No action: logged for comparison with legacy routing."
