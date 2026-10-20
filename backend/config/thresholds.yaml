@@ -5,7 +5,7 @@ complexity_escalate:
   max_entities: 3                   # escalate when a document splits into more tracks than this
   percent_without_face_value: true  # escalate a percent-only dividend we could not convert
 dividend_change_ratio_warn: 3.0
-llm_vision_max_pages: 3             # cap on pages sent to the LLM when OCR is unavailable
+llm_vision_max_pages: 2             # cap on pages sent to the LLM when OCR is unavailable
 field_confidence:                   # confidence given to a value by how its page text was read
   text_layer: 0.95
   ocr_tesseract: 0.85

@@ -27,6 +27,12 @@ def escalation_reasons(doc: Document) -> list[str]:
 
     if not doc.company or not doc.company.value:
         reasons.append("company not identified from the document")
+    elif doc.company.method != "fixture":
+        if doc.company.confidence < th["classifier_confidence_min"]:
+            reasons.append(f"company '{doc.company.value}' identified by {doc.company.method} only "
+                           f"(confidence {doc.company.confidence:.2f}, not confirmed by the text layer)")
+        if not doc.symbol:
+            reasons.append(f"company '{doc.company.value}' is not in the company master (no reference data)")
     for track in doc.tracks:
         for f in track.fields:
             if f.name in CRITICAL_FIELDS and f.method.startswith("llm_"):

@@ -131,7 +131,8 @@ def parse_announcement(flat: str) -> list[Hit]:
 
 PROFIT_LABELS = ["profit for the year", "profit for the period", "profit after taxation", "profit after tax"]
 STATEMENT_PAGE = r"profit\s*(?:or|and|&)\s*loss|income\s*statement|statement\s*of\s*income|financial\s*results"
-NUMBER_TOKEN = re.compile(r"^\(?[\d,]{3,}(?:\.\d+)?\)?$")
+# Comma-grouped figures ('34,581,820', '(1,234)') or 5+ plain digits; never a 4-digit year column header.
+NUMBER_TOKEN = re.compile(r"^\(?(?:\d{1,3}(?:,\d{3})+|\d{5,})(?:\.\d+)?\)?$")
 
 
 def profit_row(rows: list[dict], page_text: str) -> dict | None:

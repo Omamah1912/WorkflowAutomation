@@ -20,6 +20,7 @@ _cache_lock = threading.Lock()
 # Addressees / registrars that appear in every letter but are never the issuer.
 NOT_ISSUER = ("stock exchange", "securities and exchange", "central depository", "clearing company",
               "registrar", "(pvt)", "(private)")
+VISION_TIMEOUT_S = 90       # transcribing a dense statement page takes 30-60 s
 CRITICAL = {"Financial Results": ["cash_dividend", "cash_dividend_percent"],
             "Dividend Credit Notice": ["cash_dividend"]}
 
@@ -31,6 +32,7 @@ def read_page(doc: Document, page_no: int) -> dict:
     key = (doc.doc_id, page_no)
     with _cache_lock:
         if key in PAGE_CACHE:
+            doc.page_methods[page_no] = PAGE_CACHE[key]["method"]  # a re-run creates a fresh Document
             return PAGE_CACHE[key]
     t0 = time.perf_counter()
     if pdf_text.has_text_layer(doc.path, page_no):
@@ -59,8 +61,12 @@ def _vision_or_unread(doc: Document, page_no: int) -> dict:
         return {"text": "", "rows": [], "method": "unread"}
     try:
         out, method = llm.call_llm(prompts.TRANSCRIBE_PAGE, prompts.TranscribeOut, "extractor_vision",
-                                   image_png=pdf_text.render_png(doc.path, page_no), doc_id=doc.doc_id)
-        return {"text": out.text, "rows": [], "method": method}
+                                   image_png=pdf_text.render_png(doc.path, page_no), doc_id=doc.doc_id,
+                                   timeout_s=VISION_TIMEOUT_S)
+        # One row per transcribed line (no bboxes: the LLM does not give positions).
+        rows = [{"text": line, "bbox": None, "words": [{"text": w, "bbox": None} for w in line.split()]}
+                for line in out.text.splitlines() if line.strip()]
+        return {"text": out.text, "rows": rows, "method": method}
     except llm.LLMUnavailable:
         return {"text": "", "rows": [], "method": "unread"}
 
@@ -103,7 +109,7 @@ def _bbox(doc: Document, page_no: int, page: dict, snippet: str) -> list[float] 
             box = pdf_text.find_bbox(doc.path, page_no, needle)
             if box:
                 return box
-    elif page["rows"] and number:  # OCR words carry their own bboxes
+    elif page["method"] == "ocr_tesseract" and number:  # OCR words carry their own bboxes
         for row in page["rows"]:
             for w in row["words"]:
                 if number.group(0) in w["text"]:
@@ -142,14 +148,15 @@ def _find_company_on_page(doc: Document, page_no: int, page: dict, use_llm: bool
         if m and not any(w in m.group(1).lower() for w in NOT_ISSUER):
             best = process.extractOne(m.group(1), names, scorer=fuzz.token_sort_ratio, processor=utils.default_process)
             if best and best[1] >= 85:
-                name, symbol, snippet, confidence, method = best[0], best[2], m.group(1), _confidence(page["method"]), "classical"
+                name, symbol, snippet = best[0], best[2], m.group(1)
+                confidence, method = _confidence(page["method"]), _audit_method(page["method"])
                 break
     if not symbol:
         for sym, master_name in names.items():
             al = fuzz.partial_ratio_alignment(master_name.lower(), flat.lower())
             if al and al.score >= 88:
                 name, symbol, snippet = master_name, sym, flat[al.dest_start:al.dest_end]
-                confidence, method = round(al.score / 100 * _confidence(page["method"]), 2), "classical"
+                confidence, method = round(al.score / 100 * _confidence(page["method"]), 2), _audit_method(page["method"])
                 break
     if not symbol and flat and use_llm:
         try:
@@ -172,13 +179,32 @@ def _find_company_on_page(doc: Document, page_no: int, page: dict, use_llm: bool
         if use_llm:
             audit.log(doc, "extract", "extractor", decision="company not found -> needs_review", status="warning")
         return False
+    if method.startswith("llm_") and symbol:
+        confidence, snippet = _corroborate(doc, name, confidence, snippet)
     doc.symbol = symbol
     doc.company = FieldValue(name="company", value=name, unit_type="text", confidence=confidence, method=method,
-                             evidence=Evidence(doc_id=doc.doc_id, page=page_no, text=snippet[:200],
+                             evidence=Evidence(doc_id=doc.doc_id, page=page_no, text=snippet[:300],
                                                bbox=_bbox(doc, page_no, page, snippet) if method == "classical" else None))
     audit.log(doc, "extract", "extractor", method=method, confidence=confidence,
               decision=f"company = {name} ({symbol or 'not in company master'})", evidence=doc.company.evidence)
     return True
+
+
+CORROBORATION_MIN = 75      # fuzzy % of the master name found in the page-1 text layer
+CORROBORATED_CONFIDENCE = 0.85
+
+
+def _corroborate(doc: Document, name: str, confidence: float, snippet: str) -> tuple[float, str]:
+    """An LLM-read company name is trusted only if the page-1 text layer also shows it (even OCR-garbled,
+    e.g. 'Attied Bank Umited' for 'Allied Bank Limited'). This is the classical confirmation."""
+    first = read_page(doc, 1)
+    if first["method"] != "text_layer":
+        return confidence, snippet
+    al = fuzz.partial_ratio_alignment(name.lower(), flat_text(first).lower())
+    if al and al.score >= CORROBORATION_MIN:
+        seen = flat_text(first)[al.dest_start:al.dest_end]
+        return CORROBORATED_CONFIDENCE, f"{snippet} | corroborated on p1 text layer: '{seen}' ({al.score:.0f}%)"
+    return confidence, snippet
 
 
 # ---------------------------------------------------------------- main entry

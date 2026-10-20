@@ -38,7 +38,7 @@ def _unclear_boundaries(doc: Document, labels: dict[int, str]) -> bool:
     return mentions_many and len(set(labels.values())) < 2
 
 
-def _llm_split(doc: Document) -> dict[int, str]:
+def _llm_split(doc: Document) -> tuple[dict[int, str], str]:
     """LLM fallback for entity boundaries, using the first lines of each readable page."""
     readable = {n: " ".join(extractor.read_page(doc, n)["text"].split()[:60]) for n in range(2, doc.pages + 1)
                 if extractor.read_page(doc, n)["method"] != "unread"}
@@ -47,7 +47,8 @@ def _llm_split(doc: Document) -> dict[int, str]:
     out, method = llm.call_llm(
         prompts.SPLIT_ENTITIES.format(pages="\n".join(f"Page {n}: {t}" for n, t in readable.items())),
         prompts.SplitOut, "transformer_split", doc_id=doc.doc_id)
-    return {p.page: p.entity for p in out.pages if p.entity in ("unconsolidated", "consolidated", "standalone")}
+    labels = {p.page: p.entity for p in out.pages if p.entity in ("unconsolidated", "consolidated", "standalone")}
+    return labels, method
 
 
 def transform(doc: Document) -> None:
@@ -58,7 +59,7 @@ def transform(doc: Document) -> None:
         labels = page_entities(doc)
         if _unclear_boundaries(doc, labels):
             try:
-                labels, method = _llm_split(doc), "llm"
+                labels, method = _llm_split(doc)
             except llm.LLMUnavailable as e:
                 doc.complexity.append("entity boundaries unclear: cover mentions several entities, "
                                       f"statement pages could not be labelled ({str(e)[:80]})")
@@ -77,7 +78,7 @@ def transform(doc: Document) -> None:
     doc.tracks = list(tracks.values())
 
     _derive_face_value(doc, primary)
-    audit.log(doc, "transform", "transformer", method="classical" if method == "classical" else method,
+    audit.log(doc, "transform", "transformer", method=method,
               decision=f"{len(doc.tracks)} track(s): {', '.join(t.entity_label + ' p' + str(t.pages or [1]) for t in doc.tracks)}",
               duration_ms=audit.ms_since(t0))
 
