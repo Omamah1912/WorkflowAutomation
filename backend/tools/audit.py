@@ -44,3 +44,8 @@ def events_since(cursor: int, batch_id: str | None = None) -> tuple[list[AuditEv
 def for_doc(doc_id: str) -> list[AuditEvent]:
     with _lock:
         return [e for e in EVENTS if e.doc_id == doc_id]
+
+
+def all_events() -> list[AuditEvent]:
+    with _lock:
+        return list(EVENTS)

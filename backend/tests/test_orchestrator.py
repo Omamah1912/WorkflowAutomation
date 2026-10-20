@@ -9,7 +9,8 @@ def test_fixture_batch_escalates_and_blocks_ledger():
     doc = orchestrator.DOCS["FIX-SAMSUNG-2018"]
     assert doc.route == "needs_review"
     assert doc.resolver_loops == 1            # tried once, nothing to re-read -> stop
-    assert ledger.entries("FIX-SAMSUNG-2018") == []   # escalated items never reach the ledger
+    # escalated items never reach the ledger automatically (only a human approval writes them)
+    assert not [e for e in ledger.entries("FIX-SAMSUNG-2018") if e["approved_by"] == "auto"]
     stages = [e.stage for e in audit.for_doc(doc.doc_id) if e.batch_id == batch]
     assert stages[:3] == ["intake", "classify", "extract"]
     assert "resolve" in stages and stages[-1] == "route"
