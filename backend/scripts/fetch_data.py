@@ -15,7 +15,7 @@ import urllib.request
 from datetime import date, datetime
 from pathlib import Path
 
-import fitz  # PyMuPDF
+import pymupdf as fitz
 from rapidfuzz import fuzz, process, utils
 
 BACKEND = Path(__file__).resolve().parents[1]
@@ -44,7 +44,8 @@ REAL_DOCS = [
     ("dividend_credit_notice", "https://dps.psx.com.pk/download/document/236785.pdf"),
     ("multi_entity_results", "https://dps.psx.com.pk/download/document/283440.pdf"),
     ("multi_entity_results", "https://dps.psx.com.pk/download/document/281401.pdf"),
-    ("scanned_results", "https://dps.psx.com.pk/download/document/240718.pdf"),
+    # 240718 has a native text layer, so it is not a "scanned" category; OCR is decided per page.
+    ("financial_results", "https://dps.psx.com.pk/download/document/240718.pdf"),
     ("template_filings", "https://dps.psx.com.pk/download/document/185483.pdf"),
     ("template_filings", "https://dps.psx.com.pk/download/document/207953.pdf"),
     ("template_filings", "https://dps.psx.com.pk/download/document/230000.pdf"),
