@@ -9,3 +9,4 @@ backend/data/_cache/
 backend/data/runtime/
 frontend/dist/
 frontend/.env.local
+backend/static/

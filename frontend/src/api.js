@@ -1,5 +1,7 @@
 // Thin client for the GhostStop API. Every number on screen comes through here.
-export const API = (import.meta.env.VITE_API_URL || "http://localhost:8000").replace(/\/$/, "");
+// VITE_API_URL unset -> local backend; set to "" -> same origin (UI served by the API on Cloud Run).
+const configured = import.meta.env.VITE_API_URL;
+export const API = (configured === undefined ? "http://localhost:8000" : configured).replace(/\/$/, "");
 
 async function handle(res) {
   if (!res.ok) {

@@ -10,6 +10,7 @@ from typing import Literal, Optional
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import Response
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel
 from sse_starlette.sse import EventSourceResponse
 
@@ -252,6 +253,13 @@ def baseline():
 @app.get("/ledger")
 def get_ledger():
     return ledger.entries()
+
+
+# The built React UI (frontend `npm run build:cloudrun` -> backend/static) is served at "/".
+# Mounted last so every API route above takes precedence.
+STATIC_DIR = os.path.join(os.path.dirname(__file__), "static")
+if os.path.isdir(STATIC_DIR):
+    app.mount("/", StaticFiles(directory=STATIC_DIR, html=True), name="ui")
 
 
 if __name__ == "__main__":
