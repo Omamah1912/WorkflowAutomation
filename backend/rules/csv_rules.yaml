@@ -1,0 +1,51 @@
+# Rules for the CSV volume lane (metadata only: intake -> classify -> dedup -> route).
+
+rules:
+  - id: CSV-01
+    description: Relevance is decided by document type.
+    severity: warning
+    check: relevance_by_type
+    params:
+      # ps07 lists from CLAUDE.md 5.1
+      relevant_types: [10-K Filing, 10-Q Filing, Quarterly Report, Earnings Release, Financial Supplement,
+                       Press Release - Financial, Dividend Declaration,
+                       # ps01 types (team decision — the dataset gives no ground truth for ps01)
+                       Annual Report, Earnings Call Transcript, Regulatory Filing, ESG Disclosure,
+                       Investor Presentation, News Article]
+      irrelevant_types: [Board Resolution, Debenture Notice, Director Appointment Notice,
+                         Earnings Calendar Update, Press Release - Product,
+                         Technical Report, Internal Memo]
+    fields: [doc_type]
+    source_clause: "Dataset: CLAUDE.md 5.1 (ps07 relevant/irrelevant lists); ps01 mapping is a team decision"
+    verify: false
+
+  - id: CSV-02
+    description: Required metadata present and dates normalised to ISO 8601.
+    severity: warning
+    check: required_metadata
+    params:
+      required:
+        csv_ps01: [doc_id, filename, source, received_date, file_type]
+        csv_ps07: [job_id, document_id, filename, ingestion_timestamp]
+      date_fields: [received_date, ingestion_timestamp]
+    fields: [metadata]
+    source_clause: "Dataset schema: CLAUDE.md 5.1"
+    verify: false
+
+  - id: CSV-03
+    description: Not a duplicate (same document_id, same sha256, or fuzzy company + type + period).
+    severity: warning
+    check: not_duplicate
+    params: {}
+    fields: [duplicate_of]
+    source_clause: "Dataset: CLAUDE.md 5.1 (known duplicate FDOC-35032)"
+    verify: false
+
+  - id: CSV-04
+    description: Agent stream agrees with the legacy assigned_stream (disagreements are logged, not enforced).
+    severity: info
+    check: stream_agrees_with_legacy
+    params: {}
+    fields: [stream, legacy_stream]
+    source_clause: "Dataset: ps01 assigned_stream is inconsistent legacy routing (CLAUDE.md 5.1)"
+    verify: false

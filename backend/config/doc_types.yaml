@@ -1,0 +1,55 @@
+# Document taxonomy used by agents/classifier.py.
+#   filename: regexes tried against the lower-cased filename
+#   keywords: phrases looked for in first-page text (or the CSV snippet / legacy detected type)
+#   max_confidence: cap for types that are ambiguous by nature (e.g. a generic "press release")
+# Relevance + stream for ps07 types follow CLAUDE.md 5.1. ps01 and PSX types are team decisions.
+
+types:
+  # ---- PSX real filings (deep lane)
+  - name: Financial Results
+    relevant: true
+    stream: Financial Analysis
+    filename: ['financial_results', 'results']
+    keywords: ['financial results for the', 'financial results of the company', 'statement of profit or loss']
+  - name: Dividend Credit Notice
+    relevant: true
+    stream: Financial Analysis
+    filename: ['credit_notice', 'dividend_credit']
+    keywords: ['credit of interim', 'credit of final', 'has been credited', 'credited into', 'credited electronically']
+  - name: Regulatory Notice
+    relevant: false
+    stream: Regulatory Compliance
+    filename: ['regulatory_notice']
+    keywords: ['for all listed companies', 'regulatory affairs division']
+  - name: Corporate Action Instruction
+    relevant: true
+    stream: Financial Analysis
+    filename: ['replay', 'instruction']
+    keywords: ['dividend payment instruction', 'corporate action instruction']
+
+  # ---- ps07 types (CLAUDE.md 5.1)
+  - {name: 10-K Filing, relevant: true, stream: Financial Analysis, filename: ['10-k_filing'], keywords: ['10-k filing']}
+  - {name: 10-Q Filing, relevant: true, stream: Financial Analysis, filename: ['10-q_filing'], keywords: ['10-q filing']}
+  - {name: Quarterly Report, relevant: true, stream: Financial Analysis, filename: ['quarterly_report'], keywords: ['quarterly report']}
+  - {name: Earnings Release, relevant: true, stream: Financial Analysis, filename: ['earnings_release'], keywords: ['earnings release']}
+  - {name: Financial Supplement, relevant: true, stream: Financial Analysis, filename: ['financial_supplement'], keywords: ['financial supplement']}
+  - {name: Press Release - Financial, relevant: true, stream: Financial Analysis, filename: ['press_release_-_financial'], keywords: ['press release - financial']}
+  - {name: Dividend Declaration, relevant: true, stream: Financial Analysis, filename: ['dividend_declaration'], keywords: ['dividend declaration']}
+  - {name: Board Resolution, relevant: false, stream: Archive, filename: ['board_resolution'], keywords: ['board resolution']}
+  - {name: Debenture Notice, relevant: false, stream: Archive, filename: ['debenture_notice'], keywords: ['debenture notice']}
+  - {name: Director Appointment Notice, relevant: false, stream: Archive, filename: ['director_appointment_notice'], keywords: ['director appointment notice']}
+  - {name: Earnings Calendar Update, relevant: false, stream: Archive, filename: ['earnings_calendar_update'], keywords: ['earnings calendar update']}
+  - {name: Press Release - Product, relevant: false, stream: Archive, filename: ['press_release_-_product'], keywords: ['press release - product']}
+
+  # ---- ps01 types (team decision: the dataset has no ground truth for ps01 relevance)
+  - {name: Annual Report, relevant: true, stream: Financial Analysis, filename: ['annual_report'], keywords: ['annual report']}
+  - {name: Earnings Call Transcript, relevant: true, stream: Financial Analysis, filename: ['earnings_call_transcript'], keywords: ['earnings call transcript']}
+  - {name: Regulatory Filing, relevant: true, stream: Regulatory Compliance, filename: ['regulatory_filing'], keywords: ['regulatory filing']}
+  - {name: ESG Disclosure, relevant: true, stream: Regulatory Compliance, filename: ['esg_disclosure'], keywords: ['esg disclosure']}
+  - {name: Investor Presentation, relevant: true, stream: Market Research, filename: ['investor_presentation'], keywords: ['investor presentation']}
+  - {name: News Article, relevant: true, stream: Market Research, filename: ['news_article'], keywords: ['news article']}
+  - {name: Technical Report, relevant: false, stream: Archive, filename: ['technical_report'], keywords: ['technical report']}
+  - {name: Internal Memo, relevant: false, stream: Archive, filename: ['internal_memo'], keywords: ['internal memo']}
+  # A ps01 "press release" could be financial or product: ambiguous, so confidence is capped below
+  # the threshold and it goes to the LLM fallback / human review.
+  - {name: Press Release, relevant: true, stream: Market Research, filename: ['press_release_\d'], keywords: ['press release'], max_confidence: 0.6}

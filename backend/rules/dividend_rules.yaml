@@ -1,0 +1,116 @@
+# Dividend / corporate-action rules, evaluated per track by tools/rules_engine.py.
+# check     = name of a generic check function in rules_engine.CHECKS
+# params    = everything the check needs (no thresholds live in Python)
+# fields    = track fields the rule reads (the resolver re-extracts these on failure)
+# verify    = true when the clause text has not been confirmed against the downloaded PDF
+#
+# Clause references confirmed against:
+#   PSX Regulations (Feb 09 2026)    data/rulebooks/psx/PSX-Regulations-February-09-2026.pdf
+#   PSX Correspondence Manual         data/rulebooks/psx/Correspondance-Manual-CM-final-version-01.pdf
+#   Companies Act 2017                not downloaded yet -> every citation of it keeps verify: true
+
+applies_to: [Financial Results, Dividend Declaration, Dividend Credit Notice, Corporate Action Instruction]
+
+rules:
+  - id: DIV-01
+    description: A cash dividend must be money per share; a bonus issue must be a share ratio.
+    severity: critical
+    check: unit_type_is
+    params:
+      expected:
+        cash_dividend: currency_per_share
+        bonus_shares: share_ratio
+    fields: [cash_dividend, bonus_shares]
+    source_clause: "PSX Correspondence Manual Form-3 (p.12): cash dividend stated 'at Rs. __ per share'; bonus 'in the proportion of __ share(s) for every __ share(s)'"
+    verify: false
+
+  - id: DIV-02
+    description: New shares to be issued must not exceed the shares outstanding.
+    severity: critical
+    check: shares_issued_within_outstanding
+    params:
+      max_multiple_of_outstanding: 1.0
+    fields: [cash_dividend, bonus_shares, shares_outstanding, eligible_shares]
+    source_clause: "Companies Act 2017 — issue of shares / bonus shares (section to be confirmed once the Act is downloaded)"
+    verify: true
+
+  - id: DIV-03
+    description: Rs per share must equal percentage x face value.
+    severity: critical
+    check: rs_equals_percent_of_face
+    params:
+      tolerance_rs: 0.01
+    fields: [cash_dividend, cash_dividend_percent, face_value]
+    source_clause: "PSX Correspondence Manual Form-3 (p.12): 'at Rs. __ per share i.e. __%' (percentage of face value)"
+    verify: false
+
+  - id: DIV-04
+    description: A percent-only dividend must be converted using the face value; missing face value -> warning.
+    severity: warning
+    check: percent_only_converted
+    params: {}
+    fields: [cash_dividend, cash_dividend_percent, face_value]
+    source_clause: "PSX Correspondence Manual Form-3 (p.12) requires both the Rs per share and the % figure"
+    verify: false
+
+  - id: DIV-05
+    description: Amount in a dividend credit notice must equal the amount declared for the same company and period.
+    severity: critical
+    check: credit_matches_declaration
+    params:
+      applies_to: [Dividend Credit Notice]
+      declaration_types: [Financial Results, Dividend Declaration]
+      tolerance_rs: 0.01
+    fields: [cash_dividend]
+    source_clause: "PSX Regulations 5.6.10 (p.80) payment of dividend; Correspondence Manual Form-9/Form-10 (p.22-23) credit '@ Rs. __ per share ... announced by the Board'"
+    verify: false
+
+  - id: DIV-06
+    description: Ex-price must equal previous close minus the entitlement (only when both prices are supplied).
+    severity: critical
+    check: ex_price_consistent
+    params:
+      tolerance_rs: 0.01
+    fields: [prev_close_price, ex_price, cash_dividend]
+    source_clause: "PSX Regulations 10.6 (p.154) determining ex-price of security on book closure"
+    verify: false
+
+  - id: DIV-07
+    description: Total payout (per share x shares outstanding) should be plausible against reported profit.
+    severity: warning
+    check: payout_vs_profit
+    params:
+      max_payout_to_profit: 1.0
+    fields: [cash_dividend, shares_outstanding, profit_after_tax]
+    source_clause: "Companies Act 2017 — dividends payable out of profits (section to be confirmed once the Act is downloaded)"
+    verify: true
+
+  - id: DIV-08
+    description: Dividend change versus the previous period of the same company should not exceed the configured ratio.
+    severity: warning
+    check: change_vs_previous
+    params:
+      threshold_key: dividend_change_ratio_warn   # read from config/thresholds.yaml
+    fields: [cash_dividend]
+    source_clause: "Dataset sanity check (team heuristic, not a rulebook clause)"
+    verify: false
+
+  - id: DIV-09
+    description: All five announcement items should be present (cash dividend, bonus, right shares, other entitlement, other price-sensitive information).
+    severity: warning
+    check: announcement_items_present
+    params:
+      applies_to: [Financial Results, Dividend Declaration]
+      items: [item_cash_dividend, item_bonus_shares, item_right_shares, item_other_entitlement, item_price_sensitive]
+    fields: [item_cash_dividend, item_bonus_shares, item_right_shares, item_other_entitlement, item_price_sensitive]
+    source_clause: "PSX Correspondence Manual Form-3 (p.12) items (i)-(v) (joined by AND/OR); PSX Regulations 5.6.1(a)(iii) (p.78)"
+    verify: false
+
+  - id: DIV-10
+    description: Book-closure dates must be ordered and start after the announcement date.
+    severity: warning
+    check: book_closure_ordered
+    params: {}
+    fields: [announcement_date, book_closure_from, book_closure_to]
+    source_clause: "PSX Regulations 5.5.11(a) (p.77): minimum seven days' notice to the Exchange prior to closure of share transfer books"
+    verify: false
